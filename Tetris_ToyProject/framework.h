@@ -11,5 +11,11 @@
 // C 런타임 헤더 파일입니다.
 #include <stdlib.h>
 #include <malloc.h>
+
 #include <memory.h>
+#include <memory>
+
 #include <tchar.h>
+#include <string>
+
+using namespace std;
