@@ -1,4 +1,13 @@
 # Visual Studio build files
+
+.vs/
+ipch/
+*.suo
+*.user
+*.vcxproj.user
+*.VC.db
+*.VC.VC.opendb
+
 Debug/
 Release/
 x64/
