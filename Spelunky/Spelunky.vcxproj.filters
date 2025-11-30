@@ -1,12 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Public">
-      <UniqueIdentifier>{4781363a-ab9a-42c4-ae44-bbcf548814d5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Private">
-      <UniqueIdentifier>{2c34b252-69be-4dd3-9db6-abc9cde60d96}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Default">
       <UniqueIdentifier>{667586a4-b3eb-4a9d-9507-67319e6ef617}</UniqueIdentifier>
     </Filter>
@@ -22,6 +16,18 @@
     </Filter>
     <Filter Include="02. Renderer">
       <UniqueIdentifier>{f1892882-8640-415c-b1be-3c4c4ac56f07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04. Scene">
+      <UniqueIdentifier>{8127326e-3134-40ac-9c9e-bd872be06631}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04. Scene\Private">
+      <UniqueIdentifier>{6ff699dc-5222-474c-8cdd-9fb69d46f4dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04. Scene\Public">
+      <UniqueIdentifier>{121ed4a3-14ce-46b5-b222-f41fd01c5d18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. Game">
+      <UniqueIdentifier>{b7ce7eda-115a-4e50-bd28-192e8de8b127}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -45,6 +51,12 @@
     </ClInclude>
     <ClInclude Include="..\Public\Window.h">
       <Filter>01. Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\BaseLevel.h">
+      <Filter>04. Scene\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Game.h">
+      <Filter>03. Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +84,12 @@
     </ClCompile>
     <ClCompile Include="..\Private\Window.cpp">
       <Filter>01. Window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\BaseLevel.cpp">
+      <Filter>04. Scene\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Game.cpp">
+      <Filter>03. Game</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

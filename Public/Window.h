@@ -8,6 +8,7 @@ public:
 	~CWindow();
 public:
 	HWND Get_WindowHandle() { return m_hWnd; };
+
 public:
 	void Show(int cmdShow);
 	bool Create(HINSTANCE hInstance, int width, int height, const wstring& title);

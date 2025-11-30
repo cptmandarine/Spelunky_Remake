@@ -129,6 +129,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\Public\BaseLevel.h" />
+    <ClInclude Include="..\Public\Game.h" />
     <ClInclude Include="..\Public\MainApp.h" />
     <ClInclude Include="..\Public\Renderer.h" />
     <ClInclude Include="..\Public\Window.h" />
@@ -138,6 +140,8 @@
     <ClInclude Include="Spelunky.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Private\BaseLevel.cpp" />
+    <ClCompile Include="..\Private\Game.cpp" />
     <ClCompile Include="..\Private\MainApp.cpp" />
     <ClCompile Include="..\Private\Renderer.cpp" />
     <ClCompile Include="..\Private\Window.cpp" />

@@ -1,13 +1,15 @@
 #pragma once
 #include "framework.h"
-#include "Window.h"
-#include "Renderer.h"
+
+
+class CWindow;
+class CGame;
 
 class CMainApp
 {
 public:
 	CMainApp() = default;
-	~CMainApp() = default;
+	~CMainApp();
 
 public:
 	bool Initilize(HINSTANCE hInstance, int nCmdShow);
@@ -15,11 +17,10 @@ public:
 public:
 	int Run();
 private:
-	static const int W_WDITH = 480;
+	static const int W_WDITH = 1280;
 	static const int W_HEIGHT = 720;
 
 	unique_ptr<CWindow>   m_pWindow;
-	unique_ptr<CRenderer> m_pRenderer;
-
+	unique_ptr<CGame>	  m_pGame;
 };
 

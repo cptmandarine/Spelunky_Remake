@@ -5,7 +5,7 @@ class CRenderer
 {
 public:
 	CRenderer() = default;
-	~CRenderer() = default;
+	~CRenderer();
 
 public:
 	void Initialize(HWND hWnd, int width, int height);

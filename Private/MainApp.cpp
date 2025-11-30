@@ -1,24 +1,27 @@
 #include "MainApp.h"
+#include "Game.h"
+#include "Window.h"
+
+CMainApp::~CMainApp() = default;
 
 bool CMainApp::Initilize(HINSTANCE hInstance, int nCmdShow)
 {
     m_pWindow = make_unique<CWindow>();
-
-    if (!m_pWindow->Create(hInstance, W_WDITH, W_HEIGHT, L"Tetris"))
+    if (!m_pWindow->Create(hInstance, W_WDITH, W_HEIGHT, L"Spelunky2"))
     {
         return false;
     }
     m_pWindow->Show(nCmdShow);
 
-    m_pRenderer = make_unique<CRenderer>();
-    m_pRenderer->Initialize(m_pWindow->Get_WindowHandle(), W_WDITH, W_HEIGHT);
+    m_pGame = make_unique<CGame>();
+    m_pGame->Initialize(m_pWindow->Get_WindowHandle(), W_WDITH, W_HEIGHT);
 	return true;
 }
 
 void CMainApp::Release()
 {
-	m_pRenderer.reset();
     m_pWindow.reset();
+    m_pGame.reset();
 }
 
 int CMainApp::Run()
@@ -37,9 +40,7 @@ int CMainApp::Run()
             DispatchMessage(&msg);
         }
 
-        m_pRenderer->Begin();
-        m_pRenderer->Draw();
-        m_pRenderer->End();
+        m_pGame->Render();
 
     }
     return static_cast<int>(msg.wParam);

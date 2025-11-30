@@ -1,5 +1,7 @@
 #include "Renderer.h"
 
+CRenderer::~CRenderer() = default;
+
 void CRenderer::Initialize(HWND hWnd, int width, int height)
 {
 	m_hWnd = hWnd;
@@ -24,8 +26,8 @@ void CRenderer::Begin()
 
 void CRenderer::Draw()
 {
-	//렌더 테스트
-	//Rectangle(m_hBackDC, 220, 340, 260, 380);
+	//오브젝트들을 레이어별로 렌더
+
 }
 
 void CRenderer::End()
@@ -37,5 +39,4 @@ void CRenderer::End()
 	DeleteObject(m_hBackBmp);
 	DeleteDC(m_hBackDC);
 	ReleaseDC(m_hWnd, m_hDC);
-
 }

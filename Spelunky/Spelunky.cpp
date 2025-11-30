@@ -1,7 +1,4 @@
-﻿// Tetris_ToyProject.cpp : 애플리케이션에 대한 진입점을 정의합니다.
-//
-
-#include "framework.h"
+﻿#include "framework.h"
 #include "Spelunky.h"
 #include "MainApp.h"
 
@@ -12,9 +9,6 @@
 WCHAR szTitle[MAX_LOADSTRING];                  // 제목 표시줄 텍스트입니다.
 WCHAR szWindowClass[MAX_LOADSTRING];            // 기본 창 클래스 이름입니다.
 
-// 이 코드 모듈에 포함된 함수의 선언을 전달합니다:
-BOOL                InitInstance(HINSTANCE, int);
-LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_opt_ HINSTANCE hPrevInstance,
