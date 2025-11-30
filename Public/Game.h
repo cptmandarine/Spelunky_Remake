@@ -6,8 +6,9 @@ class CRenderer;
 class CGame
 {
 public:
-	CGame() = default;
+	CGame();
 	~CGame();
+
 private:
 	CGame(const CGame& other) = delete;
 	const CGame& operator=(const CGame& other) = delete;

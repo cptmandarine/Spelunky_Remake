@@ -20,14 +20,11 @@
     <Filter Include="04. Scene">
       <UniqueIdentifier>{8127326e-3134-40ac-9c9e-bd872be06631}</UniqueIdentifier>
     </Filter>
-    <Filter Include="04. Scene\Private">
-      <UniqueIdentifier>{6ff699dc-5222-474c-8cdd-9fb69d46f4dc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="04. Scene\Public">
-      <UniqueIdentifier>{121ed4a3-14ce-46b5-b222-f41fd01c5d18}</UniqueIdentifier>
-    </Filter>
     <Filter Include="03. Game">
       <UniqueIdentifier>{b7ce7eda-115a-4e50-bd28-192e8de8b127}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04. Scene\00. BaseLevel">
+      <UniqueIdentifier>{9c4b7760-3786-4b41-9d77-9106069f2b46}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -52,11 +49,11 @@
     <ClInclude Include="..\Public\Window.h">
       <Filter>01. Window</Filter>
     </ClInclude>
-    <ClInclude Include="..\Public\BaseLevel.h">
-      <Filter>04. Scene\Public</Filter>
-    </ClInclude>
     <ClInclude Include="..\Public\Game.h">
       <Filter>03. Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\BaseLevel.h">
+      <Filter>04. Scene\00. BaseLevel</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -85,11 +82,11 @@
     <ClCompile Include="..\Private\Window.cpp">
       <Filter>01. Window</Filter>
     </ClCompile>
-    <ClCompile Include="..\Private\BaseLevel.cpp">
-      <Filter>04. Scene\Private</Filter>
-    </ClCompile>
     <ClCompile Include="..\Private\Game.cpp">
       <Filter>03. Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\BaseLevel.cpp">
+      <Filter>04. Scene\00. BaseLevel</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

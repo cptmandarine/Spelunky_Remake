@@ -1,7 +1,5 @@
 #include "Renderer.h"
 
-CRenderer::~CRenderer() = default;
-
 void CRenderer::Initialize(HWND hWnd, int width, int height)
 {
 	m_hWnd = hWnd;

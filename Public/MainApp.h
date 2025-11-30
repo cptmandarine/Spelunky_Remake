@@ -1,14 +1,13 @@
 #pragma once
 #include "framework.h"
 
-
-class CWindow;
 class CGame;
+class CWindow;
 
 class CMainApp
 {
 public:
-	CMainApp() = default;
+	CMainApp();
 	~CMainApp();
 
 public:

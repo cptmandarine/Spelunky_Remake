@@ -2,18 +2,26 @@
 #include "Game.h"
 #include "Window.h"
 
-CMainApp::~CMainApp() = default;
+CMainApp::CMainApp()
+    : m_pGame(make_unique<CGame>())
+    , m_pWindow(make_unique<CWindow>())
+{
+}
+
+CMainApp::~CMainApp()
+{
+    m_pGame.reset();
+    m_pWindow.reset();
+}
 
 bool CMainApp::Initilize(HINSTANCE hInstance, int nCmdShow)
 {
-    m_pWindow = make_unique<CWindow>();
     if (!m_pWindow->Create(hInstance, W_WDITH, W_HEIGHT, L"Spelunky2"))
     {
         return false;
     }
     m_pWindow->Show(nCmdShow);
 
-    m_pGame = make_unique<CGame>();
     m_pGame->Initialize(m_pWindow->Get_WindowHandle(), W_WDITH, W_HEIGHT);
 	return true;
 }
@@ -40,6 +48,7 @@ int CMainApp::Run()
             DispatchMessage(&msg);
         }
 
+        //60초에 한번씩 호출
         m_pGame->Render();
 
     }

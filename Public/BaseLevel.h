@@ -1,18 +1,16 @@
 #pragma once
 
-class CBaseLevel abstract
+class CBaseLevel abstract 
 {
 public:
     CBaseLevel() = default;
     virtual ~CBaseLevel() = default;
 
 public:
-    virtual void Ready_Level();
-    virtual void Initialize();
-    virtual void Update(float fTimeDelta);
-    virtual void Late_Update(float fTimeDelta);
-
-private:
+    virtual void Initialize() = 0;
+    virtual void Ready_Level() = 0;
+    virtual void Update(float fTimeDelta) = 0;
+    virtual void Late_Update(float fTimeDelta) = 0;
 
 };
 

@@ -24,7 +24,7 @@
     <ProjectGuid>{da6bcc2a-3f99-475e-941e-eec222a9822d}</ProjectGuid>
     <RootNamespace>TetrisToyProject</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Spelunky</ProjectName>
+    <ProjectName>Spelunky2</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

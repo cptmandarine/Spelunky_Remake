@@ -1,13 +1,18 @@
 #include "Game.h"
 #include "Renderer.h"
 
+CGame::CGame()
+	: m_pRenderer(make_unique<CRenderer>())
+{
+}
+
 CGame::~CGame()
 {
+	m_pRenderer.reset();
 }
 
 void CGame::Initialize(HWND hWnd, int width, int height)
 {
-	m_pRenderer = make_unique<CRenderer>();
 	m_pRenderer->Initialize(hWnd, width, height);
 }
 
@@ -26,5 +31,4 @@ void CGame::Render()
 
 void CGame::Release()
 {
-	m_pRenderer.reset();
 }
