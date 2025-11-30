@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Public">
+      <UniqueIdentifier>{4781363a-ab9a-42c4-ae44-bbcf548814d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Private">
+      <UniqueIdentifier>{2c34b252-69be-4dd3-9db6-abc9cde60d96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Default">
+      <UniqueIdentifier>{667586a4-b3eb-4a9d-9507-67319e6ef617}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="00. MainApp">
+      <UniqueIdentifier>{9080c1d6-c8ce-4f95-b251-3f247414015e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Window">
+      <UniqueIdentifier>{5bd40285-a60c-4381-b314-5bae57b057b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02. Renderer">
+      <UniqueIdentifier>{f1892882-8640-415c-b1be-3c4c4ac56f07}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Default</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Spelunky.h">
+      <Filter>Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Renderer.h">
+      <Filter>02. Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\MainApp.h">
+      <Filter>00. MainApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Window.h">
+      <Filter>01. Window</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Spelunky.rc">
+      <Filter>Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="Spelunky.ico">
+      <Filter>Resources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Spelunky.cpp">
+      <Filter>Default</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Renderer.cpp">
+      <Filter>02. Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\MainApp.cpp">
+      <Filter>00. MainApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Window.cpp">
+      <Filter>01. Window</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
