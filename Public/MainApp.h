@@ -1,8 +1,8 @@
 #pragma once
-#include "framework.h"
 
 class CGame;
 class CWindow;
+class CRenderer;
 
 class CMainApp
 {
@@ -18,8 +18,15 @@ public:
 private:
 	static const int W_WDITH = 1280;
 	static const int W_HEIGHT = 720;
+	static const int FPS = 60;
+
+	float m_fPrevTime;
+	float m_fAccumulator;
+
+private:
 
 	unique_ptr<CWindow>   m_pWindow;
 	unique_ptr<CGame>	  m_pGame;
+
 };
 

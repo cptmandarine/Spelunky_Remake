@@ -1,6 +1,4 @@
 #pragma once
-#include "framework.h"
-
 class CRenderer;
 
 class CGame

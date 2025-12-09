@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "Renderer.h"
 
 void CRenderer::Initialize(HWND hWnd, int width, int height)
