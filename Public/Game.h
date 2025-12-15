@@ -1,5 +1,6 @@
 #pragma once
 class CRenderer;
+class CLevelSystem;
 
 class CGame
 {
@@ -21,6 +22,9 @@ public:
 
 private:
 	//弊副 按眉甫 包府
+	//Scene_Manager
 	unique_ptr<CRenderer> m_pRenderer;
+	unique_ptr<CLevelSystem> m_pLevelSystem;
+
 };
 

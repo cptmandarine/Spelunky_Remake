@@ -133,8 +133,12 @@
   <ItemGroup>
     <ClInclude Include="..\Public\BaseLevel.h" />
     <ClInclude Include="..\Public\Game.h" />
+    <ClInclude Include="..\Public\GameObject.h" />
     <ClInclude Include="..\Public\MainApp.h" />
+    <ClInclude Include="..\Public\MainLevel.h" />
+    <ClInclude Include="..\Public\Player.h" />
     <ClInclude Include="..\Public\Renderer.h" />
+    <ClInclude Include="..\Public\LevelSystem.h" />
     <ClInclude Include="..\Public\Window.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="pch.h" />
@@ -145,8 +149,12 @@
   <ItemGroup>
     <ClCompile Include="..\Private\BaseLevel.cpp" />
     <ClCompile Include="..\Private\Game.cpp" />
+    <ClCompile Include="..\Private\GameObject.cpp" />
     <ClCompile Include="..\Private\MainApp.cpp" />
+    <ClCompile Include="..\Private\MainLevel.cpp" />
+    <ClCompile Include="..\Private\Player.cpp" />
     <ClCompile Include="..\Private\Renderer.cpp" />
+    <ClCompile Include="..\Private\LevelSystem.cpp" />
     <ClCompile Include="..\Private\Window.cpp" />
     <ClCompile Include="Spelunky.cpp" />
     <ClCompile Include="pch.cpp">

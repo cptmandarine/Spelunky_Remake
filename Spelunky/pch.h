@@ -9,9 +9,18 @@
 
 #include <memory.h>
 #include <memory>
+#include <iostream>
 
 #include <tchar.h>
 #include <string>
 #include <functional>
+
+#include <unordered_map>
+#include <map>
+#include <vector>
+
+#ifdef _DEBUG
+#pragma comment(linker, "/entry:wWinMainCRTStartup /subsystem:console")
+#endif
 
 using namespace std;

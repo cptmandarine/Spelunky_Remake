@@ -17,14 +17,26 @@
     <Filter Include="02. Renderer">
       <UniqueIdentifier>{f1892882-8640-415c-b1be-3c4c4ac56f07}</UniqueIdentifier>
     </Filter>
-    <Filter Include="04. Scene">
-      <UniqueIdentifier>{8127326e-3134-40ac-9c9e-bd872be06631}</UniqueIdentifier>
-    </Filter>
     <Filter Include="03. Game">
       <UniqueIdentifier>{b7ce7eda-115a-4e50-bd28-192e8de8b127}</UniqueIdentifier>
     </Filter>
-    <Filter Include="04. Scene\00. BaseLevel">
-      <UniqueIdentifier>{9c4b7760-3786-4b41-9d77-9106069f2b46}</UniqueIdentifier>
+    <Filter Include="05. GameSystem">
+      <UniqueIdentifier>{6ece19cf-d26e-4aa6-988c-d6a82faf7f37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. GameSystem\LevelSystem">
+      <UniqueIdentifier>{daff6919-0f43-4655-bfe8-3d7b3ce2259a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. GameSystem\LevelSystem\Level">
+      <UniqueIdentifier>{8127326e-3134-40ac-9c9e-bd872be06631}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. GameSystem\LevelSystem\Level\00.MainLevel">
+      <UniqueIdentifier>{43dac8ee-dd97-487c-ab46-f44379c70712}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06. GameObject">
+      <UniqueIdentifier>{12fa1684-6fc2-4d77-aa0c-f9ff7e386936}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06. GameObject\Player">
+      <UniqueIdentifier>{515697b2-cdf3-4a2f-bfda-b650bb0d5ffd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -49,14 +61,26 @@
     <ClInclude Include="..\Public\Game.h">
       <Filter>03. Game</Filter>
     </ClInclude>
-    <ClInclude Include="..\Public\BaseLevel.h">
-      <Filter>04. Scene\00. BaseLevel</Filter>
-    </ClInclude>
     <ClInclude Include="WindowsUtil.h">
       <Filter>Default</Filter>
     </ClInclude>
     <ClInclude Include="pch.h">
       <Filter>Default</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\BaseLevel.h">
+      <Filter>05. GameSystem\LevelSystem\Level</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\MainLevel.h">
+      <Filter>05. GameSystem\LevelSystem\Level\00.MainLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\LevelSystem.h">
+      <Filter>05. GameSystem\LevelSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\GameObject.h">
+      <Filter>06. GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Player.h">
+      <Filter>06. GameObject\Player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -88,11 +112,23 @@
     <ClCompile Include="..\Private\Game.cpp">
       <Filter>03. Game</Filter>
     </ClCompile>
-    <ClCompile Include="..\Private\BaseLevel.cpp">
-      <Filter>04. Scene\00. BaseLevel</Filter>
-    </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>Default</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\BaseLevel.cpp">
+      <Filter>05. GameSystem\LevelSystem\Level</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\MainLevel.cpp">
+      <Filter>05. GameSystem\LevelSystem\Level\00.MainLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\LevelSystem.cpp">
+      <Filter>05. GameSystem\LevelSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\GameObject.cpp">
+      <Filter>06. GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Player.cpp">
+      <Filter>06. GameObject\Player</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
