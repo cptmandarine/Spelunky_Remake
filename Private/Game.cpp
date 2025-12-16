@@ -1,7 +1,9 @@
 #include "pch.h"
 #include "Game.h"
 #include "Renderer.h"
+
 #include "LevelSystem.h"
+#include "MainLevel.h"
 
 CGame::CGame()
 	: m_pRenderer(make_unique<CRenderer>())
@@ -21,12 +23,12 @@ void CGame::Initialize(HWND hWnd, int width, int height)
 	m_pRenderer->Initialize(hWnd, width, height);
 
 	m_pLevelSystem->Initialize();
-	m_pLevelSystem->Change_Scene(CLevelSystem::STAGE_MAIN);
-
 }
 
 void CGame::Update(float fTimeDelta)
 {
+	//ÇöÀç ¾ÀÀÌ ³¡³µ´Ù¸é..
+
 	m_pLevelSystem->Update(fTimeDelta);
 }
 

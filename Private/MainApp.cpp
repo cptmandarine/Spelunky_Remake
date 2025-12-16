@@ -24,6 +24,7 @@ bool CMainApp::Initilize(HINSTANCE hInstance, int nCmdShow)
     {
         return false;
     }
+
     m_pWindow->Show(nCmdShow);
 
     m_pWindow->_CaculateCurrentFreqFunc = WindowsUtils::GetCyclesPerMiliSeconed;

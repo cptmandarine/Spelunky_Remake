@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <malloc.h>
 
+#include <assert.h>
 #include <memory.h>
 #include <memory>
 #include <iostream>
@@ -18,6 +19,7 @@
 #include <unordered_map>
 #include <map>
 #include <vector>
+
 
 #ifdef _DEBUG
 #pragma comment(linker, "/entry:wWinMainCRTStartup /subsystem:console")

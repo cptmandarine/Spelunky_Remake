@@ -1,9 +1,10 @@
 #include "pch.h"
 #include "Player.h"
 
-void CPlayer::Initialize()
+bool CPlayer::Initialize()
 {
 	cout << " 플레이어 등장 " << "\n";
+	return true;
 }
 
 void CPlayer::Update()

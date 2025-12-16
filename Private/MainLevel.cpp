@@ -12,10 +12,10 @@ CMainLevel::~CMainLevel()
 	m_Player.reset();
 }
 
-void CMainLevel::Initialize()
+bool CMainLevel::Initialize()
 {
 	cout << "¾À ÁØºñÁß.." << "\n";
-	m_Player->Initialize();
+	return m_Player->Initialize();
 }
 
 

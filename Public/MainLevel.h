@@ -10,7 +10,7 @@ public:
 	~CMainLevel();
 public:
 	// CBaseLevel을(를) 통해 상속됨
-	void Initialize() override;
+	bool Initialize() override;
 	void Update(float fTimeDelta) override;
 	void Late_Update(float fTimeDelta) override;
 

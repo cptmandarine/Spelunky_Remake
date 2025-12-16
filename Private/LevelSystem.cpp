@@ -2,30 +2,13 @@
 #include "LevelSystem.h"
 #include "MainLevel.h"
 
-void CLevelSystem::Initialize()
+
+bool CLevelSystem::Initialize()
 {
 	Register_Scene();
-
+	
+	return Change_Scene(LEVEL_ID::MAIN);
 }
-
-bool CLevelSystem::Change_Scene(SCENETYPE eSceneType)
-{
-	if (m_pCurScene)
-	{
-		m_pCurScene->Clear_Scene();
-		m_pCurScene.reset();
-	}
-
-	auto iter = m_SceneFactory.find(eSceneType);
-	if (iter != m_SceneFactory.end())
-	{
-		m_pCurScene = (iter->second)(eSceneType);
-		m_pCurScene->Initialize();
-	}
-
-	return (m_pCurScene != nullptr);
-}
-
 
 void CLevelSystem::Clear_Scene()
 {
@@ -35,6 +18,9 @@ void CLevelSystem::Clear_Scene()
 
 void CLevelSystem::Update(float fTimeDelta)
 {
+	//현재 씬이 끝났을 때,,
+
+	//이벤트를 제공받고 처리
 	m_pCurScene->Update(fTimeDelta);
 }
 
@@ -44,9 +30,23 @@ void CLevelSystem::Late_Update(float fTimeDelta)
 
 }
 
+bool CLevelSystem::Change_Scene(LEVEL_ID eID)
+{
+	if (m_pCurScene)
+	{
+		m_pCurScene->Clear_Scene();
+		m_pCurScene.reset();
+	}
+	auto iter = m_SceneFactory.find(eID);
+	assert((iter != m_SceneFactory.end()) && "unChanged Scene");
+
+	m_pCurScene = iter->second();
+
+	return m_pCurScene->Initialize();
+}
+
 void CLevelSystem::Register_Scene()
 {
-	m_SceneFactory[STAGE_MAIN] = [](SCENETYPE eType) { return make_unique<CMainLevel>(); };
-
+	m_SceneFactory[LEVEL_ID::MAIN] = [](){ return make_unique<CMainLevel>(); };
 
 }
