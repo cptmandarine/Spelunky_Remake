@@ -3,6 +3,7 @@
 #include "Game.h"
 #include "Window.h"
 #include "Renderer.h"
+#include "KeyboardInputSystem.h"
 
 CMainApp::CMainApp()
     : m_pGame(make_unique<CGame>())
@@ -29,21 +30,16 @@ bool CMainApp::Initilize(HINSTANCE hInstance, int nCmdShow)
 
     m_pWindow->_CaculateCurrentFreqFunc = WindowsUtils::GetCyclesPerMiliSeconed;
     m_pWindow->_CaculateCurrentTimeFunc = WindowsUtils::GetCurrentTimeStamp;
-
+    
+    m_pGame->_BindInputSystemFunc       = WindowsUtils::BindInput;
     m_pGame->Initialize(m_pWindow->Get_WindowHandle(), W_WDITH, W_HEIGHT);
-	return true;
-}
-
-void CMainApp::Release()
-{
-    m_pWindow.reset();
-    m_pGame.reset();
+	
+    return true;
 }
 
 int CMainApp::Run()
 {
     MSG msg;
-
     // 기본 메시지 루프입니다:
 
     const float fFrequency = m_pWindow->_CaculateCurrentFreqFunc();

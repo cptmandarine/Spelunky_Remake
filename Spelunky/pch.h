@@ -19,6 +19,7 @@
 #include <unordered_map>
 #include <map>
 #include <vector>
+#include <array>
 
 
 #ifdef _DEBUG

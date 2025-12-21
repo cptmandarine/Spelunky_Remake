@@ -1,9 +1,11 @@
 #pragma once
 
+class IInputService;
+
 class CBaseLevel abstract 
 {
 public:
-    CBaseLevel() = default;
+    CBaseLevel(const IInputService& inputService);
     virtual ~CBaseLevel() = default;
 
 public:
@@ -12,6 +14,9 @@ public:
     virtual void Late_Update(float fTimeDelta) = 0;
 
     virtual void Clear_Scene();
+
+protected:
+    const IInputService& m_Input;
 
 };
 

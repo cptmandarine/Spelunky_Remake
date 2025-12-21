@@ -108,6 +108,7 @@
       <AdditionalIncludeDirectories>$(ProjectDir)..\Public;$(ProjectDir)..\Private;$(ProjectDir)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -134,9 +135,13 @@
     <ClInclude Include="..\Public\BaseLevel.h" />
     <ClInclude Include="..\Public\Game.h" />
     <ClInclude Include="..\Public\GameObject.h" />
+    <ClInclude Include="..\Public\Controller.h" />
+    <ClInclude Include="..\Public\InputService.h" />
+    <ClInclude Include="..\Public\KeyboardInputSystem.h" />
     <ClInclude Include="..\Public\MainApp.h" />
     <ClInclude Include="..\Public\MainLevel.h" />
     <ClInclude Include="..\Public\Player.h" />
+    <ClInclude Include="..\Public\PlayerController.h" />
     <ClInclude Include="..\Public\Renderer.h" />
     <ClInclude Include="..\Public\LevelSystem.h" />
     <ClInclude Include="..\Public\Window.h" />
@@ -150,9 +155,12 @@
     <ClCompile Include="..\Private\BaseLevel.cpp" />
     <ClCompile Include="..\Private\Game.cpp" />
     <ClCompile Include="..\Private\GameObject.cpp" />
+    <ClCompile Include="..\Private\Controller.cpp" />
+    <ClCompile Include="..\Private\KeyboardInputSystem.cpp" />
     <ClCompile Include="..\Private\MainApp.cpp" />
     <ClCompile Include="..\Private\MainLevel.cpp" />
     <ClCompile Include="..\Private\Player.cpp" />
+    <ClCompile Include="..\Private\PlayerController.cpp" />
     <ClCompile Include="..\Private\Renderer.cpp" />
     <ClCompile Include="..\Private\LevelSystem.cpp" />
     <ClCompile Include="..\Private\Window.cpp" />

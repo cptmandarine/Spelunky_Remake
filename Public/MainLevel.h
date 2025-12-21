@@ -6,7 +6,7 @@ class CPlayer;
 class CMainLevel : public CBaseLevel
 {
 public:
-	CMainLevel();
+	CMainLevel(const IInputService& Input);
 	~CMainLevel();
 public:
 	// CBaseLevel을(를) 통해 상속됨
@@ -15,6 +15,7 @@ public:
 	void Late_Update(float fTimeDelta) override;
 
 private:
+
 	unique_ptr<CPlayer> m_Player;
 
 };

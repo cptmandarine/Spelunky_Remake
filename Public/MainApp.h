@@ -3,6 +3,7 @@
 class CGame;
 class CWindow;
 class CRenderer;
+class CKeyboardInputSystem;
 
 class CMainApp
 {
@@ -12,7 +13,7 @@ public:
 
 public:
 	bool Initilize(HINSTANCE hInstance, int nCmdShow);
-	void Release();
+
 public:
 	int Run();
 private:
@@ -24,9 +25,8 @@ private:
 	float m_fAccumulator;
 
 private:
-
-	unique_ptr<CWindow>   m_pWindow;
-	unique_ptr<CGame>	  m_pGame;
+	unique_ptr<CWindow>					m_pWindow;
+	unique_ptr<CGame>					m_pGame;
 
 };
 

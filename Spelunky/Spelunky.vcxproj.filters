@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Default">
-      <UniqueIdentifier>{667586a4-b3eb-4a9d-9507-67319e6ef617}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Resources">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
@@ -38,13 +35,28 @@
     <Filter Include="06. GameObject\Player">
       <UniqueIdentifier>{515697b2-cdf3-4a2f-bfda-b650bb0d5ffd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="05. GameSystem\InputSystem">
+      <UniqueIdentifier>{7272eaa4-31fb-49d1-9882-5445c7cf3b85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. GameSystem\InputSystem\IInputService">
+      <UniqueIdentifier>{c93f694d-b915-48ab-8a68-960704f26352}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98. Utils">
+      <UniqueIdentifier>{ed60c793-3e8f-4c95-9354-88a5042a5c19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99. Default">
+      <UniqueIdentifier>{667586a4-b3eb-4a9d-9507-67319e6ef617}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. GameSystem\InputSystem\InputController">
+      <UniqueIdentifier>{6b97531a-e848-4b38-bc08-dca04a5e9434}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
-      <Filter>Default</Filter>
+      <Filter>99. Default</Filter>
     </ClInclude>
     <ClInclude Include="Spelunky.h">
-      <Filter>Default</Filter>
+      <Filter>99. Default</Filter>
     </ClInclude>
     <ClInclude Include="Resource.h">
       <Filter>Resources</Filter>
@@ -61,11 +73,8 @@
     <ClInclude Include="..\Public\Game.h">
       <Filter>03. Game</Filter>
     </ClInclude>
-    <ClInclude Include="WindowsUtil.h">
-      <Filter>Default</Filter>
-    </ClInclude>
     <ClInclude Include="pch.h">
-      <Filter>Default</Filter>
+      <Filter>99. Default</Filter>
     </ClInclude>
     <ClInclude Include="..\Public\BaseLevel.h">
       <Filter>05. GameSystem\LevelSystem\Level</Filter>
@@ -80,6 +89,21 @@
       <Filter>06. GameObject</Filter>
     </ClInclude>
     <ClInclude Include="..\Public\Player.h">
+      <Filter>06. GameObject\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\InputService.h">
+      <Filter>05. GameSystem\InputSystem\IInputService</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\KeyboardInputSystem.h">
+      <Filter>05. GameSystem\InputSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsUtil.h">
+      <Filter>98. Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Controller.h">
+      <Filter>05. GameSystem\InputSystem\InputController</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\PlayerController.h">
       <Filter>06. GameObject\Player</Filter>
     </ClInclude>
   </ItemGroup>
@@ -98,7 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Spelunky.cpp">
-      <Filter>Default</Filter>
+      <Filter>99. Default</Filter>
     </ClCompile>
     <ClCompile Include="..\Private\Renderer.cpp">
       <Filter>02. Renderer</Filter>
@@ -113,7 +137,7 @@
       <Filter>03. Game</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
-      <Filter>Default</Filter>
+      <Filter>99. Default</Filter>
     </ClCompile>
     <ClCompile Include="..\Private\BaseLevel.cpp">
       <Filter>05. GameSystem\LevelSystem\Level</Filter>
@@ -128,6 +152,15 @@
       <Filter>06. GameObject</Filter>
     </ClCompile>
     <ClCompile Include="..\Private\Player.cpp">
+      <Filter>06. GameObject\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\KeyboardInputSystem.cpp">
+      <Filter>05. GameSystem\InputSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Controller.cpp">
+      <Filter>05. GameSystem\InputSystem\InputController</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\PlayerController.cpp">
       <Filter>06. GameObject\Player</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,7 +1,18 @@
 #include "pch.h"
 #include "LevelSystem.h"
 #include "MainLevel.h"
+#include "InputService.h"
+#include "Game.h"
 
+
+CLevelSystem::CLevelSystem(CGame& game)
+	: m_Game(game)
+{
+}
+
+CLevelSystem::~CLevelSystem()
+{
+}
 
 bool CLevelSystem::Initialize()
 {
@@ -19,7 +30,6 @@ void CLevelSystem::Clear_Scene()
 void CLevelSystem::Update(float fTimeDelta)
 {
 	//현재 씬이 끝났을 때,,
-
 	//이벤트를 제공받고 처리
 	m_pCurScene->Update(fTimeDelta);
 }
@@ -47,6 +57,6 @@ bool CLevelSystem::Change_Scene(LEVEL_ID eID)
 
 void CLevelSystem::Register_Scene()
 {
-	m_SceneFactory[LEVEL_ID::MAIN] = [](){ return make_unique<CMainLevel>(); };
+	m_SceneFactory[LEVEL_ID::MAIN] = [&](){ return make_unique<CMainLevel>(m_Game.Get_InptService()); };
 
 }

@@ -1,6 +1,8 @@
 #pragma once
 class CRenderer;
 class CLevelSystem;
+class CKeyboardInputSystem;
+class IInputService;
 
 class CGame
 {
@@ -13,18 +15,24 @@ private:
 	const CGame& operator=(const CGame& other) = delete;
 
 public:
+	function<void(CKeyboardInputSystem& inputSys)> _BindInputSystemFunc;
+
+public:
+	//getter
+	const IInputService& Get_InptService() const;
+
+public:
 	void Initialize(HWND hWnd, int width, int height);
 
 	void Update(float fTimeDelta);
 	void Late_Update(float fTimeDelta);
 	void Render();
-	void Release();
 
 private:
-	//弊副 按眉甫 包府
-	//Scene_Manager
-	unique_ptr<CRenderer> m_pRenderer;
-	unique_ptr<CLevelSystem> m_pLevelSystem;
+	unique_ptr<CRenderer>			 m_pRenderer;
+
+	unique_ptr<CKeyboardInputSystem> m_pKeyBoardInput;
+	unique_ptr<CLevelSystem>		 m_pLevelSystem;
 
 };
 
