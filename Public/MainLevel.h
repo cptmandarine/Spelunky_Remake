@@ -15,7 +15,6 @@ public:
 	void Late_Update(float fTimeDelta) override;
 
 private:
-
 	unique_ptr<CPlayer> m_Player;
 
 };

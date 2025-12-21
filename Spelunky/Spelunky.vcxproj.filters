@@ -50,6 +50,9 @@
     <Filter Include="05. GameSystem\InputSystem\InputController">
       <UniqueIdentifier>{6b97531a-e848-4b38-bc08-dca04a5e9434}</UniqueIdentifier>
     </Filter>
+    <Filter Include="05. GameSystem\LevelSystem\Level\01. FirstLevel">
+      <UniqueIdentifier>{598d8b61-b33d-4691-90bf-e49c65c0ab52}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -105,6 +108,9 @@
     </ClInclude>
     <ClInclude Include="..\Public\PlayerController.h">
       <Filter>06. GameObject\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\FirstLevel.h">
+      <Filter>05. GameSystem\LevelSystem\Level\01. FirstLevel</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +168,9 @@
     </ClCompile>
     <ClCompile Include="..\Private\PlayerController.cpp">
       <Filter>06. GameObject\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\FirstLevel.cpp">
+      <Filter>05. GameSystem\LevelSystem\Level\01. FirstLevel</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

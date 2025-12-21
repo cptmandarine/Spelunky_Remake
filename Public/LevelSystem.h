@@ -28,10 +28,12 @@ private:
 	bool Change_Scene(LEVEL_ID eID);
 
 private:
-	CGame&								  m_Game;
+	const CGame&								  m_Game;
 
 	unordered_map<LEVEL_ID, SceneCreator> m_SceneFactory;
 	unique_ptr<CBaseLevel>				  m_pCurScene;
+
+
 
 };
 

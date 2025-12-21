@@ -39,9 +39,16 @@ void CMainLevel::Update(float fTimeDelta)
 	}
 
 	m_Player->Update();
-
 }
 
 void CMainLevel::Late_Update(float fTimeDelta)
 {
+	using KeyBoard = IInputService::KeyCode;
+
+
+	if (m_Input.IsPressed(KeyBoard::Next))
+	{
+		m_bEnd = true;
+		cout << "¾À Á¾·á\n";
+	}
 }

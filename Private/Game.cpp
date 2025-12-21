@@ -32,6 +32,7 @@ void CGame::Initialize(HWND hWnd, int width, int height)
 
 	m_pLevelSystem->Initialize();
 
+	//키보드 키 초기화
 	_BindInputSystemFunc(*m_pKeyBoardInput);
 	assert(m_pKeyBoardInput->Initialize() && "Input Binding False");
 

@@ -28,9 +28,11 @@ bool CMainApp::Initilize(HINSTANCE hInstance, int nCmdShow)
 
     m_pWindow->Show(nCmdShow);
 
+    //초 계산
     m_pWindow->_CaculateCurrentFreqFunc = WindowsUtils::GetCyclesPerMiliSeconed;
     m_pWindow->_CaculateCurrentTimeFunc = WindowsUtils::GetCurrentTimeStamp;
-    
+
+    //입력 초기화
     m_pGame->_BindInputSystemFunc       = WindowsUtils::BindInput;
     m_pGame->Initialize(m_pWindow->Get_WindowHandle(), W_WDITH, W_HEIGHT);
 	

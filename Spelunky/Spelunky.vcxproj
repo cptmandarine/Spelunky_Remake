@@ -133,6 +133,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\Public\BaseLevel.h" />
+    <ClInclude Include="..\Public\FirstLevel.h" />
     <ClInclude Include="..\Public\Game.h" />
     <ClInclude Include="..\Public\GameObject.h" />
     <ClInclude Include="..\Public\Controller.h" />
@@ -153,6 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Private\BaseLevel.cpp" />
+    <ClCompile Include="..\Private\FirstLevel.cpp" />
     <ClCompile Include="..\Private\Game.cpp" />
     <ClCompile Include="..\Private\GameObject.cpp" />
     <ClCompile Include="..\Private\Controller.cpp" />

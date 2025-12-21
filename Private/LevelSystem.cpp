@@ -1,8 +1,11 @@
 #include "pch.h"
-#include "LevelSystem.h"
-#include "MainLevel.h"
-#include "InputService.h"
 #include "Game.h"
+#include "LevelSystem.h"
+
+#include "InputService.h"
+
+#include "MainLevel.h"
+#include "FirstLevel.h"
 
 
 CLevelSystem::CLevelSystem(CGame& game)
@@ -37,7 +40,11 @@ void CLevelSystem::Update(float fTimeDelta)
 void CLevelSystem::Late_Update(float fTimeDelta)
 {
 	m_pCurScene->Late_Update(fTimeDelta);
-
+	if (m_pCurScene->Is_End())
+	{
+		cout << "¾À ÀüÈ¯ Áß.. ";
+		Change_Scene(LEVEL_ID::STAGE_1);
+	}
 }
 
 bool CLevelSystem::Change_Scene(LEVEL_ID eID)
@@ -57,6 +64,7 @@ bool CLevelSystem::Change_Scene(LEVEL_ID eID)
 
 void CLevelSystem::Register_Scene()
 {
-	m_SceneFactory[LEVEL_ID::MAIN] = [&](){ return make_unique<CMainLevel>(m_Game.Get_InptService()); };
+	m_SceneFactory[LEVEL_ID::MAIN]	  = [&](){ return make_unique<CMainLevel>(m_Game.Get_InptService()); };
+	m_SceneFactory[LEVEL_ID::STAGE_1] = [&](){ return make_unique<CFirstLevel>(m_Game.Get_InptService()); };
 
 }
