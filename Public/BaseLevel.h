@@ -1,26 +1,29 @@
 #pragma once
+#include "GameContext.h"
+#include "EventBus.h"
 
-class IInputService;
+enum class LEVEL_ID { MAIN, STAGE_1, STAGE_2 };
+
+typedef struct tagLevelevent
+{
+    LEVEL_ID  nextLevel;
+}LEVEL_EVENT;
 
 class CBaseLevel abstract 
 {
 public:
-    CBaseLevel(const IInputService& inputService);
+    CBaseLevel(const LEVELCONTEXT& tLevelContext, const CEventBus<LEVEL_EVENT>& eventBus);
     virtual ~CBaseLevel() = default;
 public:
-    bool Is_End() { return m_bEnd; };
-public:
     virtual bool Initialize() = 0;
+    virtual void Release();
+
     virtual void Update(float fTimeDelta) = 0;
     virtual void Late_Update(float fTimeDelta) = 0;
 
-    virtual void Clear_Scene();
-
 protected:
-    const IInputService& m_Input;
-
-protected:
-    bool m_bEnd = { false };
+    const IInputService&          m_Input;
+    const CEventBus<LEVEL_EVENT>& m_EventBus;
 };
 
 

@@ -15,6 +15,8 @@
 #include <tchar.h>
 #include <string>
 #include <functional>
+#include <optional>
+
 
 #include <unordered_map>
 #include <map>

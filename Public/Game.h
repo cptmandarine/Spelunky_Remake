@@ -1,8 +1,9 @@
 #pragma once
+#include "GameContext.h"
+
 class CRenderer;
 class CLevelSystem;
 class CKeyboardInputSystem;
-class IInputService;
 
 class CGame
 {
@@ -18,10 +19,6 @@ public:
 	function<void(CKeyboardInputSystem& inputSys)> _BindInputSystemFunc;
 
 public:
-	//getter
-	const IInputService& Get_InptService() const;
-
-public:
 	void Initialize(HWND hWnd, int width, int height);
 
 	void Update(float fTimeDelta);
@@ -29,9 +26,12 @@ public:
 	void Render();
 
 private:
-	unique_ptr<CRenderer>			 m_pRenderer;
-
+	//상위
 	unique_ptr<CKeyboardInputSystem> m_pKeyBoardInput;
+	const LEVELCONTEXT				 m_tLevelContext;
+
+	//하위 
+	unique_ptr<CRenderer>			 m_pRenderer;
 	unique_ptr<CLevelSystem>		 m_pLevelSystem;
 
 };

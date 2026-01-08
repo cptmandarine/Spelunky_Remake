@@ -3,8 +3,8 @@
 #include "InputService.h"
 #include "Player.h"
 
-CFirstLevel::CFirstLevel(const IInputService& Input)
-	: CBaseLevel(Input)
+CFirstLevel::CFirstLevel(const LEVELCONTEXT& Context, const CEventBus<LEVEL_EVENT>& eventBus)
+	: CBaseLevel(Context, eventBus)
 	, m_Player(make_unique<CPlayer>())
 {
 }
@@ -37,3 +37,4 @@ void CFirstLevel::Late_Update(float fTimeDelta)
 		cout << "전환이 완료된 씬\n";
 	}
 }
+

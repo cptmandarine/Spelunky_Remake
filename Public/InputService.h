@@ -9,7 +9,7 @@ public:
 		Up,
 		Left,
 		Right,
-		Jump,
+		Space,
 		Next,
 		Last
 	};

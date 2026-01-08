@@ -31,7 +31,7 @@ namespace WindowsUtils
 		inputSys.SetInputButton(CKeyboardInputSystem::KeyCode::Up,		[]() {return Is_Press(VK_UP); });
 		inputSys.SetInputButton(CKeyboardInputSystem::KeyCode::Right,	[]() {return Is_Press(VK_RIGHT); });
 		inputSys.SetInputButton(CKeyboardInputSystem::KeyCode::Left,	[]() {return Is_Press(VK_LEFT); });
-		inputSys.SetInputButton(CKeyboardInputSystem::KeyCode::Jump,	[]() {return Is_Press(VK_SPACE); });
+		inputSys.SetInputButton(CKeyboardInputSystem::KeyCode::Space,	[]() {return Is_Press(VK_SPACE); });
 		inputSys.SetInputButton(CKeyboardInputSystem::KeyCode::Next,	[]() {return Is_Press('N'); });
 	}
 }

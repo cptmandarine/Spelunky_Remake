@@ -2,14 +2,13 @@
 #include "Game.h"
 #include "Renderer.h"
 #include "KeyboardInputSystem.h"
-
 #include "LevelSystem.h"
-#include "MainLevel.h"
 
 CGame::CGame()
-	: m_pRenderer(make_unique<CRenderer>())
-	, m_pKeyBoardInput(make_unique<CKeyboardInputSystem>())
-	, m_pLevelSystem(make_unique<CLevelSystem>(*this))
+	: m_pKeyBoardInput(make_unique<CKeyboardInputSystem>())
+	, m_tLevelContext{ *m_pKeyBoardInput }
+	, m_pRenderer(make_unique<CRenderer>())
+	, m_pLevelSystem(make_unique<CLevelSystem>(m_tLevelContext))
 {
 }
 
@@ -21,10 +20,6 @@ CGame::~CGame()
 
 }
 
-const IInputService& CGame::Get_InptService() const
-{
-	return *m_pKeyBoardInput;
-}
 
 void CGame::Initialize(HWND hWnd, int width, int height)
 {

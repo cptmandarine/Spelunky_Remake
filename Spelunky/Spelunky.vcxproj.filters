@@ -53,6 +53,9 @@
     <Filter Include="05. GameSystem\LevelSystem\Level\01. FirstLevel">
       <UniqueIdentifier>{598d8b61-b33d-4691-90bf-e49c65c0ab52}</UniqueIdentifier>
     </Filter>
+    <Filter Include="98. Utils\Event">
+      <UniqueIdentifier>{7e8fd3e7-2a35-4988-8c62-8cab918b1b35}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -111,6 +114,12 @@
     </ClInclude>
     <ClInclude Include="..\Public\FirstLevel.h">
       <Filter>05. GameSystem\LevelSystem\Level\01. FirstLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="GameContext.h">
+      <Filter>98. Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\EventBus.h">
+      <Filter>98. Utils\Event</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -171,6 +180,9 @@
     </ClCompile>
     <ClCompile Include="..\Private\FirstLevel.cpp">
       <Filter>05. GameSystem\LevelSystem\Level\01. FirstLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\EventBus.cpp">
+      <Filter>98. Utils\Event</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
