@@ -31,10 +31,15 @@ void CFirstLevel::Update(float fTimeDelta)
 void CFirstLevel::Late_Update(float fTimeDelta)
 {
 	using KeyBoard = IInputService::KeyCode;
-
 	if (m_Input.IsPressed(KeyBoard::Next))
 	{
 		cout << "전환이 완료된 씬\n";
 	}
+
+}
+
+optional<LEVEL_ID> CFirstLevel::Evaluate_NextScene()
+{
+	return nullopt;
 }
 

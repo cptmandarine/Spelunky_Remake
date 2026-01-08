@@ -22,6 +22,9 @@ public:
     virtual void Late_Update(float fTimeDelta) = 0;
 
 protected:
+    virtual optional<LEVEL_ID> Evaluate_NextScene() = 0;
+
+protected:
     const IInputService&          m_Input;
     const CEventBus<LEVEL_EVENT>& m_EventBus;
 };

@@ -16,6 +16,10 @@ public:
 	void Update(float fTimeDelta) override;
 	void Late_Update(float fTimeDelta) override;
 
+
+protected:
+	optional<LEVEL_ID> Evaluate_NextScene() override;
+
 private:
 	unique_ptr<CPlayer> m_Player;
 

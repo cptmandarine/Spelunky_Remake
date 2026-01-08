@@ -44,12 +44,21 @@ void CMainLevel::Update(float fTimeDelta)
 
 void CMainLevel::Late_Update(float fTimeDelta)
 {
-	using KeyBoard = IInputService::KeyCode;
-
-
-	if (m_Input.IsPressed(KeyBoard::Next))
+	if (auto next = Evaluate_NextScene())
 	{
-		LEVEL_EVENT evt = { LEVEL_ID::STAGE_1 };
+		LEVEL_EVENT evt = {*next};
 		m_EventBus.Publish(evt);
 	}
+
+}
+
+optional<LEVEL_ID> CMainLevel::Evaluate_NextScene()
+{
+	using KeyBoard = IInputService::KeyCode;
+	if (m_Input.IsPressed(KeyBoard::Next))
+	{
+		return LEVEL_ID::STAGE_1;
+	}
+
+	return nullopt;
 }
