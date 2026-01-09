@@ -14,6 +14,8 @@ CGame::CGame()
 
 CGame::~CGame()
 {
+	m_pRenderer->Release();
+
 	m_pRenderer.reset();
 	m_pKeyBoardInput.reset();
 	m_pLevelSystem.reset();
@@ -31,6 +33,11 @@ void CGame::Initialize(HWND hWnd, int width, int height)
 	_BindInputSystemFunc(*m_pKeyBoardInput);
 	assert(m_pKeyBoardInput->Initialize() && "Input Binding False");
 
+	//리소스 로딩
+}
+
+void CGame::Release()
+{
 }
 
 void CGame::Update(float fTimeDelta)
@@ -50,5 +57,10 @@ void CGame::Late_Update(float fTimeDelta)
 void CGame::Render()
 {
 	m_pRenderer->Draw();
+}
+
+void CGame::EndFrame()
+{
+	m_pLevelSystem->Change_Scene();
 }
 

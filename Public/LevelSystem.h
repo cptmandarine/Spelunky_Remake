@@ -17,12 +17,14 @@ public:
 	bool Initialize();
 	void Update(float fTimeDelta);
 	void Late_Update(float fTimeDelta);
+public:
+	void Change_Scene();
+
 
 private:
 	void Create_Scene(LEVEL_ID eID);
 	void Register_Scene();
 
-	void Change_Scene();
 	void Request_ChangeScene(const LEVEL_EVENT& evt);
 
 private:

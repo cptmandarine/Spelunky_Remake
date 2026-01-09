@@ -21,6 +21,7 @@ bool CLevelSystem::Initialize()
 	Register_Scene();
 	Create_Scene(LEVEL_ID::MAIN);
 
+	//µî·Ï.. publishÇÏ¸é Äã!
 	m_EventBus.Subscribe([this](const LEVEL_EVENT& evt) { Request_ChangeScene(evt); });
 
 	return true;
@@ -35,8 +36,6 @@ void CLevelSystem::Update(float fTimeDelta)
 void CLevelSystem::Late_Update(float fTimeDelta)
 {
 	m_pCurScene->Late_Update(fTimeDelta);
-	
-	if (m_PendingChange) Change_Scene();
 }
 
 void CLevelSystem::Create_Scene(LEVEL_ID eID)
@@ -56,6 +55,8 @@ void CLevelSystem::Register_Scene()
 
 void CLevelSystem::Change_Scene()
 {
+	if (!m_PendingChange) return;
+
 	if (m_pCurScene)
 	{
 		m_pCurScene->Release();

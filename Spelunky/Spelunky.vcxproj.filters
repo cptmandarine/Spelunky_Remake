@@ -20,26 +20,11 @@
     <Filter Include="05. GameSystem">
       <UniqueIdentifier>{6ece19cf-d26e-4aa6-988c-d6a82faf7f37}</UniqueIdentifier>
     </Filter>
-    <Filter Include="05. GameSystem\LevelSystem">
-      <UniqueIdentifier>{daff6919-0f43-4655-bfe8-3d7b3ce2259a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="05. GameSystem\LevelSystem\Level">
-      <UniqueIdentifier>{8127326e-3134-40ac-9c9e-bd872be06631}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="05. GameSystem\LevelSystem\Level\00.MainLevel">
-      <UniqueIdentifier>{43dac8ee-dd97-487c-ab46-f44379c70712}</UniqueIdentifier>
-    </Filter>
     <Filter Include="06. GameObject">
       <UniqueIdentifier>{12fa1684-6fc2-4d77-aa0c-f9ff7e386936}</UniqueIdentifier>
     </Filter>
     <Filter Include="06. GameObject\Player">
       <UniqueIdentifier>{515697b2-cdf3-4a2f-bfda-b650bb0d5ffd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="05. GameSystem\InputSystem">
-      <UniqueIdentifier>{7272eaa4-31fb-49d1-9882-5445c7cf3b85}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="05. GameSystem\InputSystem\IInputService">
-      <UniqueIdentifier>{c93f694d-b915-48ab-8a68-960704f26352}</UniqueIdentifier>
     </Filter>
     <Filter Include="98. Utils">
       <UniqueIdentifier>{ed60c793-3e8f-4c95-9354-88a5042a5c19}</UniqueIdentifier>
@@ -47,14 +32,50 @@
     <Filter Include="99. Default">
       <UniqueIdentifier>{667586a4-b3eb-4a9d-9507-67319e6ef617}</UniqueIdentifier>
     </Filter>
-    <Filter Include="05. GameSystem\InputSystem\InputController">
-      <UniqueIdentifier>{6b97531a-e848-4b38-bc08-dca04a5e9434}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="05. GameSystem\LevelSystem\Level\01. FirstLevel">
-      <UniqueIdentifier>{598d8b61-b33d-4691-90bf-e49c65c0ab52}</UniqueIdentifier>
-    </Filter>
     <Filter Include="98. Utils\Event">
       <UniqueIdentifier>{7e8fd3e7-2a35-4988-8c62-8cab918b1b35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. GameSystem\0. InputSystem">
+      <UniqueIdentifier>{7272eaa4-31fb-49d1-9882-5445c7cf3b85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. GameSystem\0. InputSystem\IInputService">
+      <UniqueIdentifier>{c93f694d-b915-48ab-8a68-960704f26352}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. GameSystem\0. InputSystem\InputController">
+      <UniqueIdentifier>{6b97531a-e848-4b38-bc08-dca04a5e9434}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. GameSystem\1. LevelSystem">
+      <UniqueIdentifier>{daff6919-0f43-4655-bfe8-3d7b3ce2259a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. GameSystem\1. LevelSystem\Level">
+      <UniqueIdentifier>{8127326e-3134-40ac-9c9e-bd872be06631}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. GameSystem\1. LevelSystem\Level\00.MainLevel">
+      <UniqueIdentifier>{43dac8ee-dd97-487c-ab46-f44379c70712}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. GameSystem\1. LevelSystem\Level\01. FirstLevel">
+      <UniqueIdentifier>{598d8b61-b33d-4691-90bf-e49c65c0ab52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. GameSystem\1. LevelSystem\ObjectSystem">
+      <UniqueIdentifier>{dc9c8a00-e34d-4aa6-a179-d1930e560996}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. GameSystem\1. LevelSystem\ObjectSystem\ObjectFactory">
+      <UniqueIdentifier>{8e5f7d2d-5eb4-49c6-bd74-eec617fa176a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. GameSystem\2. PrototypeRegistry">
+      <UniqueIdentifier>{bc52239a-7551-47c2-b9b1-9b36705ec5e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05. GameSystem\2. PrototypeRegistry\IPrototype">
+      <UniqueIdentifier>{d445c97a-cddf-4dc0-903c-bac0451fe997}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="07. Component">
+      <UniqueIdentifier>{c8af9082-1f04-429d-9f83-5024d5c96caf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="07. Component\Texture">
+      <UniqueIdentifier>{4f246df7-ef88-4a99-bd64-1d8c26e200e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="07. Component\Texture\Bmp">
+      <UniqueIdentifier>{6fa03657-872c-4b79-940a-51bf65cddeee}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -83,13 +104,13 @@
       <Filter>99. Default</Filter>
     </ClInclude>
     <ClInclude Include="..\Public\BaseLevel.h">
-      <Filter>05. GameSystem\LevelSystem\Level</Filter>
+      <Filter>05. GameSystem\1. LevelSystem\Level</Filter>
     </ClInclude>
     <ClInclude Include="..\Public\MainLevel.h">
-      <Filter>05. GameSystem\LevelSystem\Level\00.MainLevel</Filter>
+      <Filter>05. GameSystem\1. LevelSystem\Level\00.MainLevel</Filter>
     </ClInclude>
     <ClInclude Include="..\Public\LevelSystem.h">
-      <Filter>05. GameSystem\LevelSystem</Filter>
+      <Filter>05. GameSystem\1. LevelSystem</Filter>
     </ClInclude>
     <ClInclude Include="..\Public\GameObject.h">
       <Filter>06. GameObject</Filter>
@@ -98,28 +119,40 @@
       <Filter>06. GameObject\Player</Filter>
     </ClInclude>
     <ClInclude Include="..\Public\InputService.h">
-      <Filter>05. GameSystem\InputSystem\IInputService</Filter>
+      <Filter>05. GameSystem\0. InputSystem\IInputService</Filter>
     </ClInclude>
     <ClInclude Include="..\Public\KeyboardInputSystem.h">
-      <Filter>05. GameSystem\InputSystem</Filter>
+      <Filter>05. GameSystem\0. InputSystem</Filter>
     </ClInclude>
     <ClInclude Include="WindowsUtil.h">
       <Filter>98. Utils</Filter>
     </ClInclude>
     <ClInclude Include="..\Public\Controller.h">
-      <Filter>05. GameSystem\InputSystem\InputController</Filter>
+      <Filter>05. GameSystem\0. InputSystem\InputController</Filter>
     </ClInclude>
     <ClInclude Include="..\Public\PlayerController.h">
       <Filter>06. GameObject\Player</Filter>
     </ClInclude>
     <ClInclude Include="..\Public\FirstLevel.h">
-      <Filter>05. GameSystem\LevelSystem\Level\01. FirstLevel</Filter>
+      <Filter>05. GameSystem\1. LevelSystem\Level\01. FirstLevel</Filter>
     </ClInclude>
     <ClInclude Include="GameContext.h">
       <Filter>98. Utils</Filter>
     </ClInclude>
     <ClInclude Include="..\Public\EventBus.h">
       <Filter>98. Utils\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\PrototypeRegistry.h">
+      <Filter>05. GameSystem\2. PrototypeRegistry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Prototype.h">
+      <Filter>05. GameSystem\2. PrototypeRegistry\IPrototype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Texture.h">
+      <Filter>07. Component\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Bmp.h">
+      <Filter>07. Component\Texture\Bmp</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -155,13 +188,13 @@
       <Filter>99. Default</Filter>
     </ClCompile>
     <ClCompile Include="..\Private\BaseLevel.cpp">
-      <Filter>05. GameSystem\LevelSystem\Level</Filter>
+      <Filter>05. GameSystem\1. LevelSystem\Level</Filter>
     </ClCompile>
     <ClCompile Include="..\Private\MainLevel.cpp">
-      <Filter>05. GameSystem\LevelSystem\Level\00.MainLevel</Filter>
+      <Filter>05. GameSystem\1. LevelSystem\Level\00.MainLevel</Filter>
     </ClCompile>
     <ClCompile Include="..\Private\LevelSystem.cpp">
-      <Filter>05. GameSystem\LevelSystem</Filter>
+      <Filter>05. GameSystem\1. LevelSystem</Filter>
     </ClCompile>
     <ClCompile Include="..\Private\GameObject.cpp">
       <Filter>06. GameObject</Filter>
@@ -170,19 +203,31 @@
       <Filter>06. GameObject\Player</Filter>
     </ClCompile>
     <ClCompile Include="..\Private\KeyboardInputSystem.cpp">
-      <Filter>05. GameSystem\InputSystem</Filter>
+      <Filter>05. GameSystem\0. InputSystem</Filter>
     </ClCompile>
     <ClCompile Include="..\Private\Controller.cpp">
-      <Filter>05. GameSystem\InputSystem\InputController</Filter>
+      <Filter>05. GameSystem\0. InputSystem\InputController</Filter>
     </ClCompile>
     <ClCompile Include="..\Private\PlayerController.cpp">
       <Filter>06. GameObject\Player</Filter>
     </ClCompile>
     <ClCompile Include="..\Private\FirstLevel.cpp">
-      <Filter>05. GameSystem\LevelSystem\Level\01. FirstLevel</Filter>
+      <Filter>05. GameSystem\1. LevelSystem\Level\01. FirstLevel</Filter>
     </ClCompile>
     <ClCompile Include="..\Private\EventBus.cpp">
       <Filter>98. Utils\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\PrototypeRegistry.cpp">
+      <Filter>05. GameSystem\2. PrototypeRegistry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Prototype.cpp">
+      <Filter>05. GameSystem\2. PrototypeRegistry\IPrototype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Texture.cpp">
+      <Filter>07. Component\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Bmp.cpp">
+      <Filter>07. Component\Texture\Bmp</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

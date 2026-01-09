@@ -4,6 +4,7 @@
 class CRenderer;
 class CLevelSystem;
 class CKeyboardInputSystem;
+class CTexture;
 
 class CGame
 {
@@ -20,10 +21,12 @@ public:
 
 public:
 	void Initialize(HWND hWnd, int width, int height);
+	void Release();
 
 	void Update(float fTimeDelta);
 	void Late_Update(float fTimeDelta);
 	void Render();
+	void EndFrame();
 
 private:
 	//상위
@@ -31,8 +34,12 @@ private:
 	const LEVELCONTEXT				 m_tLevelContext;
 
 	//하위 
-	unique_ptr<CRenderer>			 m_pRenderer;
 	unique_ptr<CLevelSystem>		 m_pLevelSystem;
+	//리소스 
+				
+	//렌더
+	unique_ptr<CRenderer>			 m_pRenderer;
 
+	//프로토타입
 };
 

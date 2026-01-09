@@ -17,6 +17,7 @@ CMainLevel::~CMainLevel()
 
 bool CMainLevel::Initialize()
 {
+
 	cout << "¾À ÁØºñÁß.." << "\n";
 	return m_Player->Initialize();
 }
@@ -55,7 +56,7 @@ void CMainLevel::Late_Update(float fTimeDelta)
 optional<LEVEL_ID> CMainLevel::Evaluate_NextScene()
 {
 	using KeyBoard = IInputService::KeyCode;
-	if (m_Input.IsPressed(KeyBoard::Next))
+	if (m_Input.IsPressed(KeyBoard::N))
 	{
 		return LEVEL_ID::STAGE_1;
 	}

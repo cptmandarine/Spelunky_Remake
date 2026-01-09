@@ -21,5 +21,6 @@ inline void CEventBus<T>::Subscribe(Handler handler)
 template<typename T>
 inline void CEventBus<T>::Publish(const T& event) const
 {
+	//원하는 헨들러만 호출할 수 있도록 수정해야함
 	for (auto& elem : m_Handler) elem(event);
 }
