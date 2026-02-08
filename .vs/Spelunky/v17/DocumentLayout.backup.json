@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Spelunky_Remake\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DA6BCC2A-3F99-475E-941E-EEC222A9822D}|Spelunky\\Spelunky.vcxproj|C:\\Spelunky_Remake\\Private\\MainLevel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{DA6BCC2A-3F99-475E-941E-EEC222A9822D}|Spelunky\\Spelunky.vcxproj|solutionrelative:Private\\MainLevel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DA6BCC2A-3F99-475E-941E-EEC222A9822D}|Spelunky\\Spelunky.vcxproj|C:\\Spelunky_Remake\\Private\\LevelSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{DA6BCC2A-3F99-475E-941E-EEC222A9822D}|Spelunky\\Spelunky.vcxproj|solutionrelative:Private\\LevelSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6BCC2A-3F99-475E-941E-EEC222A9822D}|Spelunky\\Spelunky.vcxproj|C:\\Spelunky_Remake\\Public\\BaseLevel.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DA6BCC2A-3F99-475E-941E-EEC222A9822D}|Spelunky\\Spelunky.vcxproj|solutionrelative:Public\\BaseLevel.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6BCC2A-3F99-475E-941E-EEC222A9822D}|Spelunky\\Spelunky.vcxproj|C:\\Spelunky_Remake\\Private\\MainLevel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DA6BCC2A-3F99-475E-941E-EEC222A9822D}|Spelunky\\Spelunky.vcxproj|solutionrelative:Private\\MainLevel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA6BCC2A-3F99-475E-941E-EEC222A9822D}|Spelunky\\Spelunky.vcxproj|C:\\Spelunky_Remake\\Private\\FirstLevel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DA6BCC2A-3F99-475E-941E-EEC222A9822D}|Spelunky\\Spelunky.vcxproj|C:\\Spelunky_Remake\\Public\\LevelSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{DA6BCC2A-3F99-475E-941E-EEC222A9822D}|Spelunky\\Spelunky.vcxproj|solutionrelative:Public\\LevelSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA6BCC2A-3F99-475E-941E-EEC222A9822D}|Spelunky\\Spelunky.vcxproj|C:\\Spelunky_Remake\\Public\\BaseLevel.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{DA6BCC2A-3F99-475E-941E-EEC222A9822D}|Spelunky\\Spelunky.vcxproj|solutionrelative:Public\\BaseLevel.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA6BCC2A-3F99-475E-941E-EEC222A9822D}|Spelunky\\Spelunky.vcxproj|C:\\Spelunky_Remake\\Public\\MainLevel.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -94,11 +94,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "FirstLevel.cpp",
               "DocumentMoniker": "C:\\Spelunky_Remake\\Private\\FirstLevel.cpp",
               "RelativeDocumentMoniker": "Private\\FirstLevel.cpp",
@@ -106,8 +106,7 @@
               "RelativeToolTip": "Private\\FirstLevel.cpp",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-12-21T15:34:44.617Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-21T15:34:44.617Z"
             },
             {
               "$type": "Document",
@@ -119,47 +118,44 @@
               "RelativeToolTip": "Public\\FirstLevel.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-21T15:34:33.935Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-21T15:34:33.935Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainLevel.cpp",
               "DocumentMoniker": "C:\\Spelunky_Remake\\Private\\MainLevel.cpp",
               "RelativeDocumentMoniker": "Private\\MainLevel.cpp",
               "ToolTip": "C:\\Spelunky_Remake\\Private\\MainLevel.cpp",
               "RelativeToolTip": "Private\\MainLevel.cpp",
-              "ViewState": "AgIAABkAAAAAAAAAAAAiwDIAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-12-21T15:11:59.4Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-21T15:11:59.4Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "LevelSystem.cpp",
               "DocumentMoniker": "C:\\Spelunky_Remake\\Private\\LevelSystem.cpp",
               "RelativeDocumentMoniker": "Private\\LevelSystem.cpp",
-              "ToolTip": "C:\\Spelunky_Remake\\Private\\LevelSystem.cpp*",
-              "RelativeToolTip": "Private\\LevelSystem.cpp*",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAAADsAAAAeAAAAAAAAAA==",
+              "ToolTip": "C:\\Spelunky_Remake\\Private\\LevelSystem.cpp",
+              "RelativeToolTip": "Private\\LevelSystem.cpp",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAADYAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-12-21T15:10:44.617Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "BaseLevel.h",
               "DocumentMoniker": "C:\\Spelunky_Remake\\Public\\BaseLevel.h",
               "RelativeDocumentMoniker": "Public\\BaseLevel.h",
               "ToolTip": "C:\\Spelunky_Remake\\Public\\BaseLevel.h",
               "RelativeToolTip": "Public\\BaseLevel.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-30T10:43:37.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T10:43:37.077Z"
             },
             {
               "$type": "Document",
@@ -171,8 +167,7 @@
               "RelativeToolTip": "Public\\MainLevel.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-21T15:12:29.869Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-21T15:12:29.869Z"
             },
             {
               "$type": "Document",
@@ -184,12 +179,11 @@
               "RelativeToolTip": "Public\\MainApp.h",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-30T10:57:16.467Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T10:57:16.467Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "LevelSystem.h",
               "DocumentMoniker": "C:\\Spelunky_Remake\\Public\\LevelSystem.h",
               "RelativeDocumentMoniker": "Public\\LevelSystem.h",
@@ -197,8 +191,7 @@
               "RelativeToolTip": "Public\\LevelSystem.h",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-21T15:10:45.108Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-21T15:10:45.108Z"
             },
             {
               "$type": "Document",
@@ -210,8 +203,7 @@
               "RelativeToolTip": "Private\\BaseLevel.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-30T10:57:32.802Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T10:57:32.802Z"
             },
             {
               "$type": "Document",
@@ -223,8 +215,7 @@
               "RelativeToolTip": "Private\\Game.cpp",
               "ViewState": "AgIAABgAAAAAAAAAAAAqwCsAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-30T11:31:32.51Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T11:31:32.51Z"
             },
             {
               "$type": "Document",
@@ -236,8 +227,7 @@
               "RelativeToolTip": "Public\\InputService.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-21T15:27:29.969Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-21T15:27:29.969Z"
             },
             {
               "$type": "Document",
@@ -249,8 +239,7 @@
               "RelativeToolTip": "Spelunky\\WindowsUtil.h",
               "ViewState": "AgIAAAYAAAAAAAAAAAAqwBkAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-21T15:23:29.009Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-21T15:23:29.009Z"
             },
             {
               "$type": "Document",
@@ -262,8 +251,7 @@
               "RelativeToolTip": "Private\\MainApp.cpp",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAACQAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-30T10:56:50.242Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T10:56:50.242Z"
             },
             {
               "$type": "Document",
@@ -275,8 +263,7 @@
               "RelativeToolTip": "Public\\Game.h",
               "ViewState": "AgIAAAEAAAAAAAAAAAAqwBEAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-21T15:11:23.167Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-21T15:11:23.167Z"
             },
             {
               "$type": "Document",
@@ -288,8 +275,7 @@
               "RelativeToolTip": "Public\\Window.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-30T11:33:16.975Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T11:33:16.975Z"
             },
             {
               "$type": "Document",
@@ -301,8 +287,7 @@
               "RelativeToolTip": "Private\\Window.cpp",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-30T11:12:21.366Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T11:12:21.366Z"
             },
             {
               "$type": "Document",

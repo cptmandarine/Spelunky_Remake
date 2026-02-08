@@ -28,11 +28,11 @@ bool CMainApp::Initilize(HINSTANCE hInstance, int nCmdShow)
 
     m_pWindow->Show(nCmdShow);
 
-    //ÃÊ °è»ê
+    //ï¿½ï¿½ ï¿½ï¿½ï¿½
     m_pWindow->_CaculateCurrentFreqFunc = WindowsUtils::GetCyclesPerMillisecond;
     m_pWindow->_CaculateCurrentTimeFunc = WindowsUtils::GetCurrentTimeStamp;
 
-    //ÀÔ·Â ÃÊ±âÈ­
+    //ï¿½Ô·ï¿½ ï¿½Ê±ï¿½È­
     m_pGame->_BindInputSystemFunc       = WindowsUtils::BindInput;
     m_pGame->Initialize(m_pWindow->Get_WindowHandle(), W_WDITH, W_HEIGHT);
 	
@@ -42,7 +42,7 @@ bool CMainApp::Initilize(HINSTANCE hInstance, int nCmdShow)
 int CMainApp::Run()
 {
     MSG msg;
-    // ±âº» ¸Þ½ÃÁö ·çÇÁÀÔ´Ï´Ù:
+    // ï¿½âº» ï¿½Þ½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½:
 
     const float fFrequency = m_pWindow->_CaculateCurrentFreqFunc();
     m_fPrevTime = m_pWindow->_CaculateCurrentTimeFunc();
