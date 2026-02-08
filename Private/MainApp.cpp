@@ -5,6 +5,7 @@
 #include "Renderer.h"
 #include "KeyboardInputSystem.h"
 
+// MainApp - 메인 애플리케이션 로직 (한글 깨짐 확인)
 CMainApp::CMainApp()
     : m_pGame(make_unique<CGame>())
     , m_pWindow(make_unique<CWindow>())
