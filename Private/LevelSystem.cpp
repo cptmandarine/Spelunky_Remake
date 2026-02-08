@@ -1,70 +1,72 @@
 #include "pch.h"
-#include "Game.h"
 #include "LevelSystem.h"
-
-#include "InputService.h"
 
 #include "MainLevel.h"
 #include "FirstLevel.h"
 
 
-CLevelSystem::CLevelSystem(CGame& game)
-	: m_Game(game)
+CLevelSystem::CLevelSystem(const LEVELCONTEXT& levelContext)
+	: m_tContext(levelContext)
 {
 }
 
 CLevelSystem::~CLevelSystem()
 {
+	m_pCurScene->Release();
+	m_pCurScene.reset();
 }
 
 bool CLevelSystem::Initialize()
 {
 	Register_Scene();
-	
-	return Change_Scene(LEVEL_ID::MAIN);
+	Create_Scene(LEVEL_ID::MAIN);
+
+	//ï¿½ï¿½ï¿½.. publishï¿½Ï¸ï¿½ ï¿½ï¿½!
+	m_EventBus.Subscribe([this](const LEVEL_EVENT& evt) { Request_ChangeScene(evt); });
+
+	return true;
 }
 
-void CLevelSystem::Clear_Scene()
-{
-	//°¢Á¾ ¾À Á¤º¸ »èÁ¦
-
-}
 
 void CLevelSystem::Update(float fTimeDelta)
 {
-	//ÇöÀç ¾ÀÀÌ ³¡³µÀ» ¶§,,
-	//ÀÌº¥Æ®¸¦ Á¦°ø¹Þ°í Ã³¸®
 	m_pCurScene->Update(fTimeDelta);
 }
 
 void CLevelSystem::Late_Update(float fTimeDelta)
 {
 	m_pCurScene->Late_Update(fTimeDelta);
-	if (m_pCurScene->Is_End())
-	{
-		cout << "¾À ÀüÈ¯ Áß.. ";
-		Change_Scene(LEVEL_ID::STAGE_1);
-	}
 }
 
-bool CLevelSystem::Change_Scene(LEVEL_ID eID)
+void CLevelSystem::Create_Scene(LEVEL_ID eID)
 {
-	if (m_pCurScene)
-	{
-		m_pCurScene->Clear_Scene();
-		m_pCurScene.reset();
-	}
 	auto iter = m_SceneFactory.find(eID);
-	assert((iter != m_SceneFactory.end()) && "unChanged Scene");
-
+	assert((iter != m_SceneFactory.end()) && "inValid Scene");
 	m_pCurScene = iter->second();
-
-	return m_pCurScene->Initialize();
 }
+
 
 void CLevelSystem::Register_Scene()
 {
-	m_SceneFactory[LEVEL_ID::MAIN]	  = [&](){ return make_unique<CMainLevel>(m_Game.Get_InputService()); };
-	m_SceneFactory[LEVEL_ID::STAGE_1] = [&](){ return make_unique<CFirstLevel>(m_Game.Get_InputService()); };
+	m_SceneFactory[LEVEL_ID::MAIN]	  = [&](){ return make_unique<CMainLevel> (m_tContext, m_EventBus); };
+	m_SceneFactory[LEVEL_ID::STAGE_1] = [&](){ return make_unique<CFirstLevel>(m_tContext, m_EventBus); };
+}
 
+void CLevelSystem::Change_Scene()
+{
+	if (!m_PendingChange) return;
+
+	if (m_pCurScene)
+	{
+		m_pCurScene->Release();
+		m_pCurScene.reset();
+	}
+
+	Create_Scene(*m_PendingChange);
+	m_PendingChange.reset();
+}
+
+void CLevelSystem::Request_ChangeScene(const LEVEL_EVENT& evt)
+{
+	m_PendingChange = evt.nextLevel;
 }

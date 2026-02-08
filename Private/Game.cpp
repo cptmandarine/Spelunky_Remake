@@ -2,26 +2,27 @@
 #include "Game.h"
 #include "Renderer.h"
 #include "KeyboardInputSystem.h"
-
 #include "LevelSystem.h"
-#include "MainLevel.h"
 
 CGame::CGame()
-	: m_pRenderer(make_unique<CRenderer>())
-	, m_pKeyBoardInput(make_unique<CKeyboardInputSystem>())
-	, m_pLevelSystem(make_unique<CLevelSystem>(*this))
+	: m_pKeyBoardInput(make_unique<CKeyboardInputSystem>())
+	, m_tLevelContext{ *m_pKeyBoardInput }
+	, m_pRenderer(make_unique<CRenderer>())
+	, m_pLevelSystem(make_unique<CLevelSystem>(m_tLevelContext))
 {
 }
 
 CGame::~CGame()
 {
+	m_pRenderer->Release();
+
 	m_pRenderer.reset();
 	m_pKeyBoardInput.reset();
 	m_pLevelSystem.reset();
 
 }
 
-const IInputService& CGame::Get_InputService() const
+const IInputService& CGame::Get_InptService() const
 {
 	return *m_pKeyBoardInput;
 }
@@ -32,15 +33,20 @@ void CGame::Initialize(HWND hWnd, int width, int height)
 
 	m_pLevelSystem->Initialize();
 
-	//Å°º¸µå Å° ÃÊ±âÈ­
+	//Å°ï¿½ï¿½ï¿½ï¿½ Å° ï¿½Ê±ï¿½È­
 	_BindInputSystemFunc(*m_pKeyBoardInput);
 	assert(m_pKeyBoardInput->Initialize() && "Input Binding False");
 
+	//ï¿½ï¿½ï¿½Ò½ï¿½ ï¿½Îµï¿½
+}
+
+void CGame::Release()
+{
 }
 
 void CGame::Update(float fTimeDelta)
 {
-	//ÇöÀç ¾ÀÀÌ ³¡³µ´Ù¸é..
+	//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ù¸ï¿½..
 	m_pLevelSystem->Update(fTimeDelta);
 
 }
@@ -48,7 +54,7 @@ void CGame::Update(float fTimeDelta)
 void CGame::Late_Update(float fTimeDelta)
 {
 	m_pLevelSystem->Late_Update(fTimeDelta);
-	//ÀÔ·Â ¾÷µ¥ÀÌÆ®
+	//ï¿½Ô·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
 	m_pKeyBoardInput->Update();
 }
 
@@ -57,3 +63,7 @@ void CGame::Render()
 	m_pRenderer->Draw();
 }
 
+void CGame::EndFrame()
+{
+	m_pLevelSystem->Change_Scene();
+}

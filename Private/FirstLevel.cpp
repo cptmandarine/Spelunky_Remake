@@ -3,8 +3,8 @@
 #include "InputService.h"
 #include "Player.h"
 
-CFirstLevel::CFirstLevel(const IInputService& Input)
-	: CBaseLevel(Input)
+CFirstLevel::CFirstLevel(const LEVELCONTEXT& Context, const CEventBus<LEVEL_EVENT>& eventBus)
+	: CBaseLevel(Context, eventBus)
 	, m_Player(make_unique<CPlayer>())
 {
 }
@@ -31,9 +31,15 @@ void CFirstLevel::Update(float fTimeDelta)
 void CFirstLevel::Late_Update(float fTimeDelta)
 {
 	using KeyBoard = IInputService::KeyCode;
-
-	if (m_Input.IsPressed(KeyBoard::Next))
+	if (m_Input.IsPressed(KeyBoard::N))
 	{
 		cout << "전환이 완료된 씬\n";
 	}
+
 }
+
+optional<LEVEL_ID> CFirstLevel::Evaluate_NextScene()
+{
+	return nullopt;
+}
+

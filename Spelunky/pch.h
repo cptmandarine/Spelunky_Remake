@@ -14,7 +14,9 @@
 
 #include <tchar.h>
 #include <string>
+#include <cstring>
 #include <functional>
+#include <optional>
 
 #include <unordered_map>
 #include <map>
@@ -24,6 +26,16 @@
 
 #ifdef _DEBUG
 #pragma comment(linker, "/entry:wWinMainCRTStartup /subsystem:console")
+
+#define _CRTDBG_MAP_ALLOC
+#include <stdlib.h>
+#include <crtdbg.h>
+
+#ifndef DBG_NEW 
+#define DBG_NEW new ( _NORMAL_BLOCK , __FILE__ , __LINE__ ) 
+#define new DBG_NEW 
+#endif
+
 #endif
 
 using namespace std;

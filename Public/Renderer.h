@@ -1,10 +1,12 @@
 #pragma once
+class CTexture;
+
 
 class CRenderer
 {
 public:
-	CRenderer() = default;
-	~CRenderer() = default;
+	CRenderer();
+	~CRenderer();
 
 public:
 	void Initialize(HWND hWnd, int width, int height);
@@ -16,10 +18,14 @@ public:
 	void End();
 
 private:
+	CTexture* m_testTex;
+
+private:
 	HWND m_hWnd;
 
 	HDC m_hDC;
 	HDC m_hBackDC;
+
 	HBITMAP m_hBackBmp;
 	HBITMAP m_hOldBmp;
 

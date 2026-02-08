@@ -145,19 +145,25 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\Public\BaseLevel.h" />
+    <ClInclude Include="..\Public\Bmp.h" />
+    <ClInclude Include="..\Public\EventBus.h" />
     <ClInclude Include="..\Public\FirstLevel.h" />
     <ClInclude Include="..\Public\Game.h" />
     <ClInclude Include="..\Public\GameObject.h" />
     <ClInclude Include="..\Public\Controller.h" />
     <ClInclude Include="..\Public\InputService.h" />
+    <ClInclude Include="..\Public\Prototype.h" />
     <ClInclude Include="..\Public\KeyboardInputSystem.h" />
     <ClInclude Include="..\Public\MainApp.h" />
     <ClInclude Include="..\Public\MainLevel.h" />
     <ClInclude Include="..\Public\Player.h" />
     <ClInclude Include="..\Public\PlayerController.h" />
+    <ClInclude Include="..\Public\PrototypeRegistry.h" />
     <ClInclude Include="..\Public\Renderer.h" />
     <ClInclude Include="..\Public\LevelSystem.h" />
+    <ClInclude Include="..\Public\Texture.h" />
     <ClInclude Include="..\Public\Window.h" />
+    <ClInclude Include="GameContext.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="targetver.h" />
@@ -166,17 +172,22 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Private\BaseLevel.cpp" />
+    <ClCompile Include="..\Private\Bmp.cpp" />
+    <ClCompile Include="..\Private\EventBus.cpp" />
     <ClCompile Include="..\Private\FirstLevel.cpp" />
     <ClCompile Include="..\Private\Game.cpp" />
     <ClCompile Include="..\Private\GameObject.cpp" />
     <ClCompile Include="..\Private\Controller.cpp" />
+    <ClCompile Include="..\Private\Prototype.cpp" />
     <ClCompile Include="..\Private\KeyboardInputSystem.cpp" />
     <ClCompile Include="..\Private\MainApp.cpp" />
     <ClCompile Include="..\Private\MainLevel.cpp" />
     <ClCompile Include="..\Private\Player.cpp" />
     <ClCompile Include="..\Private\PlayerController.cpp" />
+    <ClCompile Include="..\Private\PrototypeRegistry.cpp" />
     <ClCompile Include="..\Private\Renderer.cpp" />
     <ClCompile Include="..\Private\LevelSystem.cpp" />
+    <ClCompile Include="..\Private\Texture.cpp" />
     <ClCompile Include="..\Private\Window.cpp" />
     <ClCompile Include="Spelunky.cpp" />
     <ClCompile Include="pch.cpp">

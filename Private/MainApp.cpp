@@ -80,7 +80,7 @@ int CMainApp::Run()
         }
 
         m_pGame->Render();
-
+        m_pGame->EndFrame();
     }
     return static_cast<int>(msg.wParam);
 }

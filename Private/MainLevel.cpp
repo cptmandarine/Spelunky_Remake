@@ -2,9 +2,10 @@
 #include "MainLevel.h"
 #include "InputService.h"
 #include "Player.h"
+#include "Game.h"
 
-CMainLevel::CMainLevel(const IInputService& Input)
-	: CBaseLevel(Input)
+CMainLevel::CMainLevel(const LEVELCONTEXT& Context, const CEventBus<LEVEL_EVENT>& eventBus)
+	: CBaseLevel(Context, eventBus)
 	, m_Player(make_unique<CPlayer>())
 {
 }
@@ -16,6 +17,7 @@ CMainLevel::~CMainLevel()
 
 bool CMainLevel::Initialize()
 {
+
 	cout << "씬 준비중.." << "\n";
 	return m_Player->Initialize();
 }
@@ -25,15 +27,15 @@ void CMainLevel::Update(float fTimeDelta)
 {
 	using KeyBoard = IInputService::KeyCode;
 
-	if (m_Input.IsPressed(KeyBoard::Jump))
+	if (m_Input.IsPressed(KeyBoard::Space))
 	{
 		cout << "점프 키를 누름\n";
 	}
-	else if (m_Input.IsPressing(KeyBoard::Jump))
+	else if (m_Input.IsPressing(KeyBoard::Space))
 	{
 		cout << "점프키를 누르는중\n";
 	}
-	else if (m_Input.IsReleased(KeyBoard::Jump))
+	else if (m_Input.IsReleased(KeyBoard::Space))
 	{
 		cout << "점프키를 뗌\n";
 	}
@@ -43,12 +45,21 @@ void CMainLevel::Update(float fTimeDelta)
 
 void CMainLevel::Late_Update(float fTimeDelta)
 {
-	using KeyBoard = IInputService::KeyCode;
-
-
-	if (m_Input.IsPressed(KeyBoard::Next))
+	if (auto next = Evaluate_NextScene())
 	{
-		m_bEnd = true;
-		cout << "씬 종료\n";
+		LEVEL_EVENT evt = {*next};
+		m_EventBus.Publish(evt);
 	}
+
+}
+
+optional<LEVEL_ID> CMainLevel::Evaluate_NextScene()
+{
+	using KeyBoard = IInputService::KeyCode;
+	if (m_Input.IsPressed(KeyBoard::N))
+	{
+		return LEVEL_ID::STAGE_1;
+	}
+
+	return nullopt;
 }
