@@ -32,8 +32,8 @@ public:
 	void EndFrame();
 
 private:
-	//����
 	unique_ptr<CKeyboardInputSystem> m_pKeyBoardInput;
+
 	const LEVELCONTEXT				 m_tLevelContext;
 
 	//���� 

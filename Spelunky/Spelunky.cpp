@@ -1,7 +1,6 @@
-﻿#include "pch.h"
+#include "pch.h"
 #include "Spelunky.h"
 #include "MainApp.h"
-
 
 #define MAX_LOADSTRING 100
 
