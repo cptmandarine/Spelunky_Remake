@@ -64,7 +64,7 @@ bool CLevelSystem::Change_Scene(LEVEL_ID eID)
 
 void CLevelSystem::Register_Scene()
 {
-	m_SceneFactory[LEVEL_ID::MAIN]	  = [&](){ return make_unique<CMainLevel>(m_Game.Get_InptService()); };
-	m_SceneFactory[LEVEL_ID::STAGE_1] = [&](){ return make_unique<CFirstLevel>(m_Game.Get_InptService()); };
+	m_SceneFactory[LEVEL_ID::MAIN]	  = [&](){ return make_unique<CMainLevel>(m_Game.Get_InputService()); };
+	m_SceneFactory[LEVEL_ID::STAGE_1] = [&](){ return make_unique<CFirstLevel>(m_Game.Get_InputService()); };
 
 }

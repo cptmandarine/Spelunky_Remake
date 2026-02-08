@@ -21,7 +21,7 @@ CGame::~CGame()
 
 }
 
-const IInputService& CGame::Get_InptService() const
+const IInputService& CGame::Get_InputService() const
 {
 	return *m_pKeyBoardInput;
 }
