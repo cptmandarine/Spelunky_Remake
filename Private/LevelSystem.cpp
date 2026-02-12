@@ -20,7 +20,6 @@ bool CLevelSystem::Initialize()
 	Register_Scene();
 	Create_Scene(LEVEL_ID::MAIN);
 
-	//���.. publish�ϸ� ��!
 	m_EventBus.Subscribe([this](const LEVEL_EVENT& evt) { Request_ChangeScene(evt); });
 
 	return true;
@@ -42,6 +41,8 @@ void CLevelSystem::Create_Scene(LEVEL_ID eID)
 	auto iter = m_SceneFactory.find(eID);
 	assert((iter != m_SceneFactory.end()) && "inValid Scene");
 	m_pCurScene = iter->second();
+	m_pCurScene->Initialize();
+
 }
 
 

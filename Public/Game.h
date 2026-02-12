@@ -19,8 +19,7 @@ public:
 
 public:
 	//getter
-	const IInputService& Get_InputService() const;
-
+	
 	void Initialize(HWND hWnd, int width, int height);
 	void Release();
 

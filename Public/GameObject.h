@@ -11,5 +11,7 @@ public:
 	virtual void Late_Update() = 0;
 	virtual void Render(HDC hDC) = 0;
 
+public:
+	void Move(int x, int y);
 };
 

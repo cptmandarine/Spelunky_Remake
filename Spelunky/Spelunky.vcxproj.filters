@@ -80,6 +80,9 @@
     <Filter Include="05. GameSystem\99. ServiceLocater">
       <UniqueIdentifier>{c9cf662a-e297-447b-a7ad-f8102ae839c9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="06. GameObject\Command">
+      <UniqueIdentifier>{0299a9ae-9176-4091-bfca-e1e0d9cc78ab}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -130,9 +133,6 @@
     <ClInclude Include="..\Public\Controller.h">
       <Filter>05. GameSystem\0. InputSystem\InputController</Filter>
     </ClInclude>
-    <ClInclude Include="..\Public\PlayerController.h">
-      <Filter>06. GameObject\Player</Filter>
-    </ClInclude>
     <ClInclude Include="..\Public\FirstLevel.h">
       <Filter>05. GameSystem\1. LevelSystem\Level\01. FirstLevel</Filter>
     </ClInclude>
@@ -156,6 +156,9 @@
     </ClInclude>
     <ClInclude Include="..\Public\WindowsUtil.h">
       <Filter>98. Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Command.h">
+      <Filter>06. GameObject\Command</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -211,9 +214,6 @@
     <ClCompile Include="..\Private\Controller.cpp">
       <Filter>05. GameSystem\0. InputSystem\InputController</Filter>
     </ClCompile>
-    <ClCompile Include="..\Private\PlayerController.cpp">
-      <Filter>06. GameObject\Player</Filter>
-    </ClCompile>
     <ClCompile Include="..\Private\FirstLevel.cpp">
       <Filter>05. GameSystem\1. LevelSystem\Level\01. FirstLevel</Filter>
     </ClCompile>
@@ -234,6 +234,9 @@
     </ClCompile>
     <ClCompile Include="..\Private\ServiceLocater.cpp">
       <Filter>05. GameSystem\99. ServiceLocater</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Command.cpp">
+      <Filter>06. GameObject\Command</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

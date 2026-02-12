@@ -24,7 +24,6 @@ bool CFirstLevel::Initialize()
 void CFirstLevel::Update(float fTimeDelta)
 {
 	auto& Input = CServiceLocater::Get_Service<IInputService>();
-	using KeyBoard = IInputService::KeyCode;
 
 	m_Player->Update();
 	if (Input.IsPressed(KeyBoard::N))

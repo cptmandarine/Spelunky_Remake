@@ -16,6 +16,8 @@ public:
 	void Late_Update() override;
 	void Render(HDC hDC) override;
 
+private:
+	unordered_map<int, function<void(CGameObject& obj)>> m_KeyBindings;
 
 };
 

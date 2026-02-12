@@ -146,6 +146,7 @@
   <ItemGroup>
     <ClInclude Include="..\Public\BaseLevel.h" />
     <ClInclude Include="..\Public\Bmp.h" />
+    <ClInclude Include="..\public\Command.h" />
     <ClInclude Include="..\Public\EventBus.h" />
     <ClInclude Include="..\Public\FirstLevel.h" />
     <ClInclude Include="..\Public\Game.h" />
@@ -157,7 +158,6 @@
     <ClInclude Include="..\Public\MainApp.h" />
     <ClInclude Include="..\Public\MainLevel.h" />
     <ClInclude Include="..\Public\Player.h" />
-    <ClInclude Include="..\Public\PlayerController.h" />
     <ClInclude Include="..\Public\PrototypeRegistry.h" />
     <ClInclude Include="..\Public\Renderer.h" />
     <ClInclude Include="..\Public\LevelSystem.h" />
@@ -173,6 +173,7 @@
   <ItemGroup>
     <ClCompile Include="..\Private\BaseLevel.cpp" />
     <ClCompile Include="..\Private\Bmp.cpp" />
+    <ClCompile Include="..\Private\Command.cpp" />
     <ClCompile Include="..\Private\EventBus.cpp" />
     <ClCompile Include="..\Private\FirstLevel.cpp" />
     <ClCompile Include="..\Private\Game.cpp" />
@@ -183,7 +184,6 @@
     <ClCompile Include="..\Private\MainApp.cpp" />
     <ClCompile Include="..\Private\MainLevel.cpp" />
     <ClCompile Include="..\Private\Player.cpp" />
-    <ClCompile Include="..\Private\PlayerController.cpp" />
     <ClCompile Include="..\Private\PrototypeRegistry.cpp" />
     <ClCompile Include="..\Private\Renderer.cpp" />
     <ClCompile Include="..\Private\LevelSystem.cpp" />

@@ -20,10 +20,6 @@ CGame::~CGame()
 
 }
 
-const IInputService& CGame::Get_InputService() const
-{
-	return *m_pKeyBoardInput;
-}
 
 void CGame::Initialize(HWND hWnd, int width, int height)
 {

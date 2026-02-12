@@ -24,3 +24,4 @@ public:
 	virtual bool IsReleased(KeyCode eCode) const = 0;
 };
 
+using KeyBoard = IInputService::KeyCode;
