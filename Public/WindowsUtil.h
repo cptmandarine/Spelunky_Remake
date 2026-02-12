@@ -10,13 +10,10 @@ namespace WindowsUtils
 		return static_cast<float>(currentTime.QuadPart);
 	}
 
-	inline float GetCyclesPerMiliSeconed()
+	inline float GetCyclesPerMillisecond()
 	{
 		LARGE_INTEGER frequency;
-		if (!QueryPerformanceFrequency(&frequency))
-		{
-			return 0;
-		}
+		QueryPerformanceFrequency(&frequency);
 		return static_cast<float>(frequency.QuadPart);
 	}
 

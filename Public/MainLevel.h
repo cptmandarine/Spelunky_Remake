@@ -10,7 +10,7 @@ public:
 	CMainLevel(const CEventBus<LEVEL_EVENT>& eventBus);
 	~CMainLevel();
 public:
-	// CBaseLevelÀ»(¸¦) ÅëÇØ »ó¼ÓµÊ
+	// CBaseLevelï¿½ï¿½(ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Óµï¿½
 	bool Initialize() override;
 
 	void Update(float fTimeDelta) override;

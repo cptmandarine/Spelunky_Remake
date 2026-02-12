@@ -20,6 +20,10 @@ CGame::~CGame()
 
 }
 
+const IInputService& CGame::Get_InputService() const
+{
+	return *m_pKeyBoardInput;
+}
 
 void CGame::Initialize(HWND hWnd, int width, int height)
 {
@@ -32,8 +36,6 @@ void CGame::Initialize(HWND hWnd, int width, int height)
 
 	//ÀÎÇ² ¼­ºñ½º µî·Ï
 	CServiceLocater::Register_Service(m_pInput.get());
-
-	//¸®¼Ò½º ·Îµù
 }
 
 void CGame::Release()
@@ -44,7 +46,7 @@ void CGame::Release()
 
 void CGame::Update(float fTimeDelta)
 {
-	//ÇöÀç ¾ÀÀÌ ³¡³µ´Ù¸é..
+	//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ù¸ï¿½..
 	m_pLevelSystem->Update(fTimeDelta);
 
 }
@@ -65,4 +67,3 @@ void CGame::EndFrame()
 {
 	m_pLevelSystem->Change_Scene();
 }
-

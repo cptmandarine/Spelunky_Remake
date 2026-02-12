@@ -20,7 +20,7 @@ bool CLevelSystem::Initialize()
 	Register_Scene();
 	Create_Scene(LEVEL_ID::MAIN);
 
-	//µî·Ï.. publishÇÏ¸é Äã!
+	//ï¿½ï¿½ï¿½.. publishï¿½Ï¸ï¿½ ï¿½ï¿½!
 	m_EventBus.Subscribe([this](const LEVEL_EVENT& evt) { Request_ChangeScene(evt); });
 
 	return true;
@@ -49,7 +49,6 @@ void CLevelSystem::Register_Scene()
 {
 	m_SceneFactory[LEVEL_ID::MAIN]	  = [&](){ return make_unique<CMainLevel> (m_EventBus); };
 	m_SceneFactory[LEVEL_ID::STAGE_1] = [&](){ return make_unique<CFirstLevel>(m_EventBus); };
-
 }
 
 void CLevelSystem::Change_Scene()

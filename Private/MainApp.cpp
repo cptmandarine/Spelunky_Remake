@@ -5,6 +5,7 @@
 #include "Renderer.h"
 #include "KeyboardInputSystem.h"
 
+// MainApp - ë©”ì¸ ì• í”Œë¦¬ì¼€ì´ì…˜ ë¡œì§ (í•œê¸€ ê¹¨ì§ í™•ì¸)
 CMainApp::CMainApp()
     : m_pGame(make_unique<CGame>())
     , m_pWindow(make_unique<CWindow>())
@@ -28,11 +29,9 @@ bool CMainApp::Initilize(HINSTANCE hInstance, int nCmdShow)
 
     m_pWindow->Show(nCmdShow);
 
-    //ÃÊ °è»ê
-    m_pWindow->_CaculateCurrentFreqFunc = WindowsUtils::GetCyclesPerMiliSeconed;
+    m_pWindow->_CaculateCurrentFreqFunc = WindowsUtils::GetCyclesPerMillisecond;
     m_pWindow->_CaculateCurrentTimeFunc = WindowsUtils::GetCurrentTimeStamp;
 
-    //ÀÔ·Â ÃÊ±âÈ­
     m_pGame->_BindInputSystemFunc       = WindowsUtils::BindInput;
     m_pGame->Initialize(m_pWindow->Get_WindowHandle(), W_WDITH, W_HEIGHT);
 	
@@ -47,8 +46,7 @@ void CMainApp::Release()
 int CMainApp::Run()
 {
     MSG msg;
-    // ±âº» ¸Ş½ÃÁö ·çÇÁÀÔ´Ï´Ù:
-
+   
     const float fFrequency = m_pWindow->_CaculateCurrentFreqFunc();
     m_fPrevTime = m_pWindow->_CaculateCurrentTimeFunc();
 

@@ -18,6 +18,9 @@ public:
 	function<void(IInputService& inputSys)> _BindInputSystemFunc;
 
 public:
+	//getter
+	const IInputService& Get_InputService() const;
+
 	void Initialize(HWND hWnd, int width, int height);
 	void Release();
 
@@ -31,9 +34,8 @@ private:
 	unique_ptr<IInputService>		 m_pInput;
 	unique_ptr<CRenderer>			 m_pRenderer;
 
-	//하위 
+
 	unique_ptr<CLevelSystem>		 m_pLevelSystem;
-	//리소스 
 
 };
 
