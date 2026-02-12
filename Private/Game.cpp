@@ -3,21 +3,19 @@
 #include "Renderer.h"
 #include "KeyboardInputSystem.h"
 #include "LevelSystem.h"
+#include "ServiceLocater.h"
 
 CGame::CGame()
-	: m_pKeyBoardInput(make_unique<CKeyboardInputSystem>())
-	, m_tLevelContext{ *m_pKeyBoardInput }
+	: m_pInput(make_unique<CKeyboardInputSystem>())
 	, m_pRenderer(make_unique<CRenderer>())
-	, m_pLevelSystem(make_unique<CLevelSystem>(m_tLevelContext))
+	, m_pLevelSystem(make_unique<CLevelSystem>())
 {
 }
 
 CGame::~CGame()
 {
-	m_pRenderer->Release();
-
 	m_pRenderer.reset();
-	m_pKeyBoardInput.reset();
+	m_pInput.reset();
 	m_pLevelSystem.reset();
 
 }
@@ -26,18 +24,22 @@ CGame::~CGame()
 void CGame::Initialize(HWND hWnd, int width, int height)
 {
 	m_pRenderer->Initialize(hWnd, width, height);
-
 	m_pLevelSystem->Initialize();
 
 	//키보드 키 초기화
-	_BindInputSystemFunc(*m_pKeyBoardInput);
-	assert(m_pKeyBoardInput->Initialize() && "Input Binding False");
+	_BindInputSystemFunc(*m_pInput);
+	assert(m_pInput->Initialize() && "Input Binding False");
+
+	//인풋 서비스 등록
+	CServiceLocater::Register_Service(m_pInput.get());
 
 	//리소스 로딩
 }
 
 void CGame::Release()
 {
+	CServiceLocater::Unregister_Service<IInputService>();
+	m_pRenderer->Release();
 }
 
 void CGame::Update(float fTimeDelta)
@@ -51,7 +53,7 @@ void CGame::Late_Update(float fTimeDelta)
 {
 	m_pLevelSystem->Late_Update(fTimeDelta);
 	//입력 업데이트
-	m_pKeyBoardInput->Update();
+	m_pInput->Update();
 }
 
 void CGame::Render()

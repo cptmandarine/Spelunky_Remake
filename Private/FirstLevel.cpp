@@ -1,10 +1,10 @@
 #include "pch.h"
 #include "FirstLevel.h"
-#include "InputService.h"
+#include "ServiceLocater.h"
 #include "Player.h"
 
-CFirstLevel::CFirstLevel(const LEVELCONTEXT& Context, const CEventBus<LEVEL_EVENT>& eventBus)
-	: CBaseLevel(Context, eventBus)
+CFirstLevel::CFirstLevel(const CEventBus<LEVEL_EVENT>& eventBus)
+	: CBaseLevel(eventBus)
 	, m_Player(make_unique<CPlayer>())
 {
 }
@@ -23,18 +23,18 @@ bool CFirstLevel::Initialize()
 
 void CFirstLevel::Update(float fTimeDelta)
 {
+	auto& Input = CServiceLocater::Get_Service<IInputService>();
 	using KeyBoard = IInputService::KeyCode;
 
 	m_Player->Update();
+	if (Input.IsPressed(KeyBoard::N))
+	{
+		cout << "¾À ÀüÈ¯ ¿Ï·áµÊ" << "\n";
+	}
 }
 
 void CFirstLevel::Late_Update(float fTimeDelta)
 {
-	using KeyBoard = IInputService::KeyCode;
-	if (m_Input.IsPressed(KeyBoard::N))
-	{
-		cout << "ÀüÈ¯ÀÌ ¿Ï·áµÈ ¾À\n";
-	}
 
 }
 

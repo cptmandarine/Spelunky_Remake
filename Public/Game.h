@@ -1,9 +1,7 @@
 #pragma once
-#include "GameContext.h"
-
 class CRenderer;
 class CLevelSystem;
-class CKeyboardInputSystem;
+class IInputService;
 class CTexture;
 
 class CGame
@@ -17,7 +15,7 @@ private:
 	const CGame& operator=(const CGame& other) = delete;
 
 public:
-	function<void(CKeyboardInputSystem& inputSys)> _BindInputSystemFunc;
+	function<void(IInputService& inputSys)> _BindInputSystemFunc;
 
 public:
 	void Initialize(HWND hWnd, int width, int height);
@@ -30,16 +28,12 @@ public:
 
 private:
 	//상위
-	unique_ptr<CKeyboardInputSystem> m_pKeyBoardInput;
-	const LEVELCONTEXT				 m_tLevelContext;
+	unique_ptr<IInputService>		 m_pInput;
+	unique_ptr<CRenderer>			 m_pRenderer;
 
 	//하위 
 	unique_ptr<CLevelSystem>		 m_pLevelSystem;
 	//리소스 
-				
-	//렌더
-	unique_ptr<CRenderer>			 m_pRenderer;
 
-	//프로토타입
 };
 

@@ -4,9 +4,10 @@
 class CLevelSystem
 {
 public:
-	CLevelSystem(const LEVELCONTEXT& levelContext);
+	CLevelSystem();
 	~CLevelSystem();
 
+private:
 	CLevelSystem(const CLevelSystem& other) = delete;
 	CLevelSystem& operator=(const CLevelSystem& other) = delete;
 
@@ -28,8 +29,7 @@ private:
 	void Request_ChangeScene(const LEVEL_EVENT& evt);
 
 private:
-	const LEVELCONTEXT&					 m_tContext;
-	CEventBus<LEVEL_EVENT>				 m_EventBus;
+	CEventBus<LEVEL_EVENT>				  m_EventBus;
 
 	unordered_map<LEVEL_ID, SceneCreator> m_SceneFactory;
 	unique_ptr<CBaseLevel>				  m_pCurScene;

@@ -149,14 +149,14 @@
     <ClInclude Include="..\Public\PrototypeRegistry.h" />
     <ClInclude Include="..\Public\Renderer.h" />
     <ClInclude Include="..\Public\LevelSystem.h" />
+    <ClInclude Include="..\Public\ServiceLocater.h" />
     <ClInclude Include="..\Public\Texture.h" />
     <ClInclude Include="..\Public\Window.h" />
-    <ClInclude Include="GameContext.h" />
+    <ClInclude Include="..\Public\WindowsUtil.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Spelunky.h" />
-    <ClInclude Include="WindowsUtil.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Private\BaseLevel.cpp" />
@@ -175,6 +175,7 @@
     <ClCompile Include="..\Private\PrototypeRegistry.cpp" />
     <ClCompile Include="..\Private\Renderer.cpp" />
     <ClCompile Include="..\Private\LevelSystem.cpp" />
+    <ClCompile Include="..\Private\ServiceLocater.cpp" />
     <ClCompile Include="..\Private\Texture.cpp" />
     <ClCompile Include="..\Private\Window.cpp" />
     <ClCompile Include="Spelunky.cpp" />

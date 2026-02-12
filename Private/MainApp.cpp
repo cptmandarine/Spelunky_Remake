@@ -39,6 +39,11 @@ bool CMainApp::Initilize(HINSTANCE hInstance, int nCmdShow)
     return true;
 }
 
+void CMainApp::Release()
+{
+    m_pGame->Release();
+}
+
 int CMainApp::Run()
 {
     MSG msg;

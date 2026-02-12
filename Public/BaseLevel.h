@@ -1,5 +1,4 @@
 #pragma once
-#include "GameContext.h"
 #include "EventBus.h"
 
 enum class LEVEL_ID { MAIN, STAGE_1, STAGE_2 };
@@ -12,7 +11,7 @@ typedef struct tagLevelevent
 class CBaseLevel abstract 
 {
 public:
-    CBaseLevel(const LEVELCONTEXT& tLevelContext, const CEventBus<LEVEL_EVENT>& eventBus);
+    CBaseLevel(const CEventBus<LEVEL_EVENT>& eventBus);
     virtual ~CBaseLevel() = default;
 public:
     virtual bool Initialize() = 0;
@@ -25,7 +24,6 @@ protected:
     virtual optional<LEVEL_ID> Evaluate_NextScene() = 0;
 
 protected:
-    const IInputService&          m_Input;
     const CEventBus<LEVEL_EVENT>& m_EventBus;
 };
 

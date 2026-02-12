@@ -77,6 +77,9 @@
     <Filter Include="07. Component\Texture\Bmp">
       <UniqueIdentifier>{6fa03657-872c-4b79-940a-51bf65cddeee}</UniqueIdentifier>
     </Filter>
+    <Filter Include="05. GameSystem\99. ServiceLocater">
+      <UniqueIdentifier>{c9cf662a-e297-447b-a7ad-f8102ae839c9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -124,9 +127,6 @@
     <ClInclude Include="..\Public\KeyboardInputSystem.h">
       <Filter>05. GameSystem\0. InputSystem</Filter>
     </ClInclude>
-    <ClInclude Include="WindowsUtil.h">
-      <Filter>98. Utils</Filter>
-    </ClInclude>
     <ClInclude Include="..\Public\Controller.h">
       <Filter>05. GameSystem\0. InputSystem\InputController</Filter>
     </ClInclude>
@@ -135,9 +135,6 @@
     </ClInclude>
     <ClInclude Include="..\Public\FirstLevel.h">
       <Filter>05. GameSystem\1. LevelSystem\Level\01. FirstLevel</Filter>
-    </ClInclude>
-    <ClInclude Include="GameContext.h">
-      <Filter>98. Utils</Filter>
     </ClInclude>
     <ClInclude Include="..\Public\EventBus.h">
       <Filter>98. Utils\Event</Filter>
@@ -153,6 +150,12 @@
     </ClInclude>
     <ClInclude Include="..\Public\Bmp.h">
       <Filter>07. Component\Texture\Bmp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\ServiceLocater.h">
+      <Filter>05. GameSystem\99. ServiceLocater</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\WindowsUtil.h">
+      <Filter>98. Utils</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -228,6 +231,9 @@
     </ClCompile>
     <ClCompile Include="..\Private\Bmp.cpp">
       <Filter>07. Component\Texture\Bmp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\ServiceLocater.cpp">
+      <Filter>05. GameSystem\99. ServiceLocater</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

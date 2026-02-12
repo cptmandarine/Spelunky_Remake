@@ -5,8 +5,7 @@
 #include "FirstLevel.h"
 
 
-CLevelSystem::CLevelSystem(const LEVELCONTEXT& levelContext)
-	: m_tContext(levelContext)
+CLevelSystem::CLevelSystem()
 {
 }
 
@@ -48,8 +47,8 @@ void CLevelSystem::Create_Scene(LEVEL_ID eID)
 
 void CLevelSystem::Register_Scene()
 {
-	m_SceneFactory[LEVEL_ID::MAIN]	  = [&](){ return make_unique<CMainLevel> (m_tContext, m_EventBus); };
-	m_SceneFactory[LEVEL_ID::STAGE_1] = [&](){ return make_unique<CFirstLevel>(m_tContext, m_EventBus); };
+	m_SceneFactory[LEVEL_ID::MAIN]	  = [&](){ return make_unique<CMainLevel> (m_EventBus); };
+	m_SceneFactory[LEVEL_ID::STAGE_1] = [&](){ return make_unique<CFirstLevel>(m_EventBus); };
 
 }
 

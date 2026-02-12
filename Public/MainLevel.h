@@ -7,7 +7,7 @@ class CGame;
 class CMainLevel : public CBaseLevel
 {
 public:
-	CMainLevel(const LEVELCONTEXT& Context, const CEventBus<LEVEL_EVENT>& eventBus);
+	CMainLevel(const CEventBus<LEVEL_EVENT>& eventBus);
 	~CMainLevel();
 public:
 	// CBaseLevel을(를) 통해 상속됨

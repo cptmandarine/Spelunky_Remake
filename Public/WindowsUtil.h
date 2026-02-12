@@ -1,5 +1,5 @@
 #pragma once
-#include "KeyboardInputSystem.h"
+#include "InputService.h"
 
 namespace WindowsUtils 
 {
@@ -25,13 +25,13 @@ namespace WindowsUtils
 		return ((::GetAsyncKeyState(keyCode) & 0x8000) != 0);
 	}
 
-	inline void BindInput(CKeyboardInputSystem& inputSys)
+	inline void BindInput(IInputService& inputSys)
 	{
-		inputSys.SetInputButton(CKeyboardInputSystem::KeyCode::Down,	[]() {return Is_Press(VK_DOWN); });
-		inputSys.SetInputButton(CKeyboardInputSystem::KeyCode::Up,		[]() {return Is_Press(VK_UP); });
-		inputSys.SetInputButton(CKeyboardInputSystem::KeyCode::Right,	[]() {return Is_Press(VK_RIGHT); });
-		inputSys.SetInputButton(CKeyboardInputSystem::KeyCode::Left,	[]() {return Is_Press(VK_LEFT); });
-		inputSys.SetInputButton(CKeyboardInputSystem::KeyCode::Space,	[]() {return Is_Press(VK_SPACE); });
-		inputSys.SetInputButton(CKeyboardInputSystem::KeyCode::N,		[]() {return Is_Press('N'); });
+		inputSys.SetInputButton(IInputService::KeyCode::Down,	[]() {return Is_Press(VK_DOWN); });
+		inputSys.SetInputButton(IInputService::KeyCode::Up,		[]() {return Is_Press(VK_UP); });
+		inputSys.SetInputButton(IInputService::KeyCode::Right,	[]() {return Is_Press(VK_RIGHT); });
+		inputSys.SetInputButton(IInputService::KeyCode::Left,	[]() {return Is_Press(VK_LEFT); });
+		inputSys.SetInputButton(IInputService::KeyCode::Space,	[]() {return Is_Press(VK_SPACE); });
+		inputSys.SetInputButton(IInputService::KeyCode::N,		[]() {return Is_Press('N'); });
 	}
 }

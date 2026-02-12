@@ -13,6 +13,7 @@ public:
 
 public:
 	bool Initilize(HINSTANCE hInstance, int nCmdShow);
+	void Release();
 
 public:
 	int Run();

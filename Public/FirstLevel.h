@@ -6,7 +6,7 @@ class CPlayer;
 class CFirstLevel : public CBaseLevel
 {
 public:
-	CFirstLevel(const LEVELCONTEXT& Context, const CEventBus<LEVEL_EVENT>& eventBus);
+	CFirstLevel(const CEventBus<LEVEL_EVENT>& eventBus);
 	~CFirstLevel();
 public:
 	// CBaseLevel을(를) 통해 상속됨

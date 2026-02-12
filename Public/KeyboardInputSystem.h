@@ -11,19 +11,19 @@ public:
 	CKeyboardInputSystem& operator=(const CKeyboardInputSystem& ohter) = delete;
 
 public:
-	bool Initialize();
-	void Update();
+	bool Initialize() override;
+	void SetInputButton(KeyCode eCode, function<bool()>) override;
+
+	void Update() override;
 
 public:
-	void SetInputButton(KeyCode eCode, function<bool()>);
-
 	// IInputServcie을(를) 통해 상속됨
 	bool IsPressed(KeyCode eCode) const override;
 	bool IsPressing(KeyCode eCode) const override;
 	bool IsReleased(KeyCode eCode) const override;
 
-private:
 
+private:
 	array<bool, static_cast<size_t>(KeyCode::Last)>			    m_mapPreKey;
 	array<function<bool()>, static_cast<size_t>(KeyCode::Last)> m_mapCurKey;
 

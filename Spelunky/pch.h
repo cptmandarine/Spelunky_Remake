@@ -17,6 +17,8 @@
 #include <cstring>
 #include <functional>
 #include <optional>
+#include <typeinfo>
+#include <typeindex>
 
 #include <unordered_map>
 #include <map>

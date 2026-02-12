@@ -33,6 +33,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     if (mainApp.Initilize(hInstance, nCmdShow))
         iMsgParam = mainApp.Run();
 
+    mainApp.Release();
 
     return iMsgParam;
 }
